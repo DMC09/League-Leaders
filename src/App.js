@@ -1,22 +1,38 @@
 import "./App.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import axios from 'axios'
 
 const {REACT_APP_KEY} = process.env
-console.log()
 
+// const test =`https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nba/trial/v7/en/games/2021/1/23/schedule.json?api_key=${REACT_APP_KEY}`
+const api =`https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`;
 function App() {
-const test =`https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nba/trial/v5/en/games/2013/12/21/schedule.json?api_key=${REACT_APP_KEY}`
-  const api =  "https://api.sportradar.us/nba/trial/v5/en/games/2013/12/21/schedule.json?api_key=${REACT_APP_KEY}";
+  useEffect(() => {
+    getData()
+
+  });
+const [data, setData] = useState('');
+console.log(data)
+async function getData() {
+  try {
+    // fetch data from a url endpoint
+    const response = await axios.get(api);
+// setData(response.data[0])
+await setData(response.data.categories)
 
 
-  const [data, setData] = ('');
-console.log(REACT_APP_KEY,'Dis is the key');
-axios.get(test).then(res=>console.log(res))
+  } catch (error) {
+console.error(error)
+  }
+}
+
+
   return (
     <div className="App">
       <p>hello</p>
-      <p>{data}</p>
+
+
+
     </div>
   );
 }

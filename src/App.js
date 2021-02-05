@@ -1,6 +1,7 @@
 // IMPORT STATEMENTS
 import "./App.css";
 import React, { useState, useContext, useEffect } from "react";
+import Shell from './components/container/Shell';
 import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
 
@@ -19,11 +20,11 @@ const App = () => {
    steals,setSteals,
  blocks,setBlocks,
 threes,setThrees,
-misc,setMisc] = useContext(CategoryContext);
+misc,setMisc,
+currentStat,setCurrentStat] = useContext(CategoryContext);
 
 
   // Meant to run only once after initial render
-
   useEffect(() => {
     const filterForPoints = data && data.filter((set) => set.name === "points");
     const filterForMinutes = data && data.filter(set=> set.name === 'minutes');
@@ -37,6 +38,7 @@ misc,setMisc] = useContext(CategoryContext);
     const filterForPersoFouls = data && data.filter(set=> set.name === 'personal_fouls');
     const filterForTechFouls = data && data.filter(set=> set.name === 'tech_fouls');
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
+
     getData();
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
@@ -46,8 +48,13 @@ misc,setMisc] = useContext(CategoryContext);
     setBlocks(filterForBlocks)
     setThrees([...filterForMadeThress,...filterForThreePCT]);
     setMisc([...filterForTurnovers,...filterForPersoFouls,...filterForTechFouls,...filterForFoulOuts])
-
   }, [data]);
+  useEffect(() => {
+
+    console.log(currentStat)
+
+  }, []);
+
 
   async function getData() {
     try {
@@ -60,6 +67,8 @@ misc,setMisc] = useContext(CategoryContext);
 
   return <div className="App">
 <p>test</p>
+<Shell state={currentStat}/>
+
   </div>;
 };
 

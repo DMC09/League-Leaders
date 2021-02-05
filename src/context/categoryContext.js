@@ -13,7 +13,7 @@ const [steals,setSteals] = useState([]);
 const [blocks,setBlocks] = useState([]);
 const [threes,setThrees] = useState([]);
 const [misc,setMisc] = useState([]);
-// const [currentStat,setCurrentState] = useState(minutes);
+const [currentStat,setCurrentStat] = useState('minutes');
 // const [orderBy,setOrderBy] = useState(total);
   return (
     <CategoryContext.Provider
@@ -26,7 +26,8 @@ const [misc,setMisc] = useState([]);
       steals,setSteals,
       blocks,setBlocks,
       threes,setThrees,
-      misc,setMisc
+      misc,setMisc,
+      currentStat,setCurrentStat
       ]}>
       {props.children}
     </CategoryContext.Provider>

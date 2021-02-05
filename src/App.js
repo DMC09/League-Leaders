@@ -2,6 +2,7 @@
 import "./App.css";
 import React, { useState, useContext, useEffect } from "react";
 import Shell from './components/container/Shell';
+import StatChanger from './components/service/StatChanger';
 import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
 
@@ -51,7 +52,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
   }, [data]);
   useEffect(() => {
 
-    console.log(currentStat)
+    console.log(currentStat,'current state through App')
 
   }, []);
 
@@ -66,9 +67,8 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
   }
 
   return <div className="App">
-<p>test</p>
-<Shell state={currentStat}/>
-
+<h1>League Leaders App</h1>
+<Shell />
   </div>;
 };
 

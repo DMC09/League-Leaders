@@ -30,6 +30,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
 
   return <div className="main_container">
     <h3>{currentStat}</h3>
+    <p>test</p>
       <StatChanger />
         {currentStat === 'minutes' &&  <Minutes /> }
         {currentStat === 'points' && <Points /> }

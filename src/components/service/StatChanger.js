@@ -30,7 +30,8 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
     <button value="blocks" onClick={handleClick}>blocks</button>
     <button value="threes" onClick={handleClick}>threes</button>
     <button value="misc" onClick={handleClick}>Misc</button>
-  </div>;
+  </div>
+  ;
 }
 
 

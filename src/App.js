@@ -8,6 +8,7 @@ import axios from "axios";
 
 // MAIN VARIABLE DECLARTIONS
 const { REACT_APP_KEY } = process.env;
+console.log(process.env);
 const api = `https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`;
 
 // COMPONENT

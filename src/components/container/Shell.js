@@ -24,7 +24,7 @@ threes,setThrees,
 misc,setMisc,
 currentStat,setCurrentStat] = useContext(CategoryContext);
   useEffect(() => {
-    console.log(currentStat,'Current Stat through context')
+
   }, []);
 
 
@@ -32,14 +32,14 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
     <h3>{currentStat}</h3>
     <p>test</p>
       <StatChanger />
-        {currentStat === 'minutes' &&  <Minutes /> }
-        {currentStat === 'points' && <Points /> }
-        {currentStat === 'rebounds' && <Rebounds /> }
-        {currentStat === 'assists' && <Assists /> }
-        {currentStat === 'misc' && <Misc /> }
-        {currentStat === 'steals' && <Steals /> }
-        {currentStat === 'threes' && <Threes /> }
-        {currentStat === 'blocks' && <Blocks /> }
+        {currentStat === 'minutes' &&  <Minutes stat={minutes} /> }
+        {currentStat === 'points' && <Points stat={points} /> }
+        {currentStat === 'rebounds' && <Rebounds stat={rebounds} /> }
+        {currentStat === 'assists' && <Assists stat={assists} /> }
+        {currentStat === 'misc' && <Misc stat={misc} /> }
+        {currentStat === 'steals' && <Steals stat={steals} /> }
+        {currentStat === 'threes' && <Threes stat={threes} /> }
+        {currentStat === 'blocks' && <Blocks stat={blocks} /> }
   </div>;
 }
 

@@ -9,6 +9,9 @@ import axios from "axios";
 // MAIN VARIABLE DECLARTIONS
 const { REACT_APP_KEY } = process.env;
 const api = `https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`;
+const config = {
+    headers: {'Access-Control-Allow-Origin': '*'}
+  };
 
 // COMPONENT
 const App = () => {
@@ -59,7 +62,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
 
   async function getData() {
     try {
-      const response = await axios.get(api);
+      const response = await axios.get(api,config);
       await setData(response.data.categories);
     } catch (error) {
       console.error(error);

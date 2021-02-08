@@ -8,10 +8,9 @@ import axios from "axios";
 
 // MAIN VARIABLE DECLARTIONS
 const { REACT_APP_KEY } = process.env;
-const api = `https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`;
-const config = {
-    headers: {'Access-Control-Allow-Origin': '*'}
-  };
+// const api = `https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`;
+const api = `http://league-leaders-api.herokuapp.com`;
+
 
 // COMPONENT
 const App = () => {
@@ -62,13 +61,13 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
 
   async function getData() {
     try {
-      const response = await axios.get(api,config);
-      await setData(response.data.categories);
+      const response = await axios.get(api);
+      // await setData(response.data.categories);
+      console.log(response,'this is the apparent response from the endpont.');
     } catch (error) {
       console.error(error);
     }
   }
-
   return <div className="App">
 <h1>League Leaders App</h1>
 <Shell />

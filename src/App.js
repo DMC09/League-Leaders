@@ -9,7 +9,7 @@ import axios from "axios";
 // MAIN VARIABLE DECLARTIONS
 const { REACT_APP_KEY } = process.env;
 // const api = `https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`;
-const api = `http://league-leaders-api.herokuapp.com`;
+const api = `https://league-leaders-api.herokuapp.com`;
 
 
 // COMPONENT

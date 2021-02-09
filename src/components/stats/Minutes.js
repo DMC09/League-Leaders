@@ -5,7 +5,7 @@ const[orderBy,setOrderBy] = useState('total');
 
 useEffect(() => {
   console.log(orderBy,'This is the order by');
-  console.log(props);
+  // console.log(props);
 }, []);
 
 

@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
-function Rebounds() {
-
+function Rebounds({stat}) {
+  useEffect(() => {
+    console.log(stat);
+  }, []);
   return <div><p>hello this is the Rebounds compononet!</p></div>;
 }
 

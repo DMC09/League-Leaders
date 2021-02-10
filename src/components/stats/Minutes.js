@@ -1,11 +1,11 @@
 import React,{useEffect,useState} from 'react';
 
-function Minutes(props) {
+function Minutes({stat}) {
 const[orderBy,setOrderBy] = useState('total');
 
 useEffect(() => {
   console.log(orderBy,'This is the order by');
-  // console.log(props);
+  console.log(stat);
 }, []);
 
 

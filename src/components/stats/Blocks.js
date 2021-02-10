@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
-function Blocks() {
-
+function Blocks({stat}) {
+  useEffect(() => {
+    console.log(stat);
+  }, []);
   return <div><p>hello this is the Blocks compononet!</p></div>;
 }
 

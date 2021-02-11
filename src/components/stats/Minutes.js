@@ -7,7 +7,7 @@ function Minutes({stat}) {
   const listItems = topTen.map((item) =>
     <li className="list-item" key={item.rank}>
 <div className="item-playerInfo">
-  <span className="item-rank">{item.rank}</span>. &nbsp;
+  <span className="item-rank">{item.rank}</span> &nbsp;
      <span className="item-playerName">{item.player.full_name}</span>
 </div>
 <div className="item-team_container">

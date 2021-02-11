@@ -27,7 +27,11 @@ margin: 0 auto;
 }
 
 .item-rank{
-  color: red;
+font-size: 3rem;
+
+background: -webkit-linear-gradient( #898989 0%,#ffffff 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .item-playerName{

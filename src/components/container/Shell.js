@@ -1,5 +1,5 @@
 import React,{useEffect, useContext} from "react";
-import StatChanger from '../service/StatChanger';
+import StatChanger from './service/StatChanger';
 import Assists from '../stats/Assists';
 import Blocks from '../stats/Blocks';
 import Minutes from '../stats/Minutes';
@@ -45,11 +45,3 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
 
 
 export default Shell;
-
-
-
-
-// {stage === 'initial' &&  <InitialForm /> }
-//   {stage === 'main' && <MainForm /> }
-//   {stage === 'success' && <SuccessPage /> }
-//   {stage === 'failure' && <FailurePage /> }

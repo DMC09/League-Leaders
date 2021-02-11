@@ -1,5 +1,5 @@
 import React,{useEffect,useContext} from "react";
-import { CategoryContext } from "../../context/categoryContext";
+import { CategoryContext } from "../../../context/categoryContext";
 
 function StatChanger() {
   const[data, setData,

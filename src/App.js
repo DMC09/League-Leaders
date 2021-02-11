@@ -2,7 +2,7 @@
 import "./App.css";
 import React, { useState, useContext, useEffect } from "react";
 import Shell from './components/container/Shell';
-import StatChanger from './components/service/StatChanger';
+
 import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
 
@@ -62,7 +62,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
     try {
       const response = await axios.get(api);
       await setData(response.data.data.categories);
-      console.log(response.data.data.categories);
+
     } catch (error) {
       console.error(error);
     }

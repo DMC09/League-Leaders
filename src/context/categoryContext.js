@@ -13,7 +13,7 @@ const [steals,setSteals] = useState([]);
 const [blocks,setBlocks] = useState([]);
 const [threes,setThrees] = useState([]);
 const [misc,setMisc] = useState([]);
-const [currentStat,setCurrentStat] = useState('minutes');
+const [currentStat,setCurrentStat] = useState(null);
 // const [orderBy,setOrderBy] = useState(total);
   return (
     <CategoryContext.Provider

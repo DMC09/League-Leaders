@@ -3,5 +3,33 @@
 }
 
 .main_container{
-  border: 2px solid red;
+  border: 2px solid purple;
+}
+
+.minutes_container {
+  border: 1px dotted green;
+width: 50%;
+margin: 0 auto;
+}
+
+
+.list-item{
+  border: 1px dashed blue;
+  padding: 1rem 2rem;
+
+}
+.list-item-container{
+  list-style: none;
+  border: 1px solid red;
+  text-align: left;
+  margin: 0 auto;
+
+}
+
+.item-rank{
+  color: red;
+}
+
+.item-playerName{
+  color: green;
 }

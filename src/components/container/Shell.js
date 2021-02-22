@@ -1,5 +1,5 @@
 import React,{useEffect, useContext} from "react";
-import StatChanger from './service/StatChanger';
+import StatChanger from '../service/StatChanger';
 import Assists from '../stats/Assists';
 import Blocks from '../stats/Blocks';
 import Minutes from '../stats/Minutes';
@@ -25,7 +25,7 @@ misc,setMisc,
 currentStat,setCurrentStat] = useContext(CategoryContext);
   useEffect(() => {
 
-  }, []);
+  }, [data]);
 
 
   return <div className="main_container">
@@ -34,12 +34,16 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
       <StatChanger />
         {currentStat === 'minutes' &&  <Minutes stat={minutes} /> }
         {currentStat === 'points' && <Points stat={points} /> }
-        {currentStat === 'rebounds' && <Rebounds stat={rebounds} /> }
-        {currentStat === 'assists' && <Assists stat={assists} /> }
-        {currentStat === 'misc' && <Misc stat={misc} /> }
-        {currentStat === 'steals' && <Steals stat={steals} /> }
-        {currentStat === 'threes' && <Threes stat={threes} /> }
-        {currentStat === 'blocks' && <Blocks stat={blocks} /> }
+
+
+        {/*
+          {currentStat === 'rebounds' && <Rebounds stat={rebounds} /> }
+          {currentStat === 'assists' && <Assists stat={assists} /> }
+          {currentStat === 'misc' && <Misc stat={misc} /> }
+          {currentStat === 'steals' && <Steals stat={steals} /> }
+          {currentStat === 'threes' && <Threes stat={threes} /> }
+          {currentStat === 'blocks' && <Blocks stat={blocks} /> }
+        */}
   </div>;
 }
 

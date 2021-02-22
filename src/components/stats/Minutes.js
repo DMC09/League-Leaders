@@ -1,11 +1,13 @@
 import React,{useEffect,useState} from 'react';
+import Item from '../service/Item';
+
 
 function Minutes({totalMins,avgMins}) {
   const[orderBy,setOrderBy] = useState('total');
   let currentStat = null;
   orderBy === 'total' ? currentStat = totalMins : currentStat = avgMins;
   let TopTenList= currentStat.ranks.slice(0,10);
-  let list = TopTenList.map(item=><li>{item.rank}</li>)
+  let list = TopTenList.map(item=> <Item data={item}/>)
 
 
 useEffect(() => {

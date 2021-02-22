@@ -11,7 +11,6 @@ import Threes from '../stats/Threes';
 import { CategoryContext } from "../../context/categoryContext";
 
 
-
 function Shell(props) {
   const [data, setData,
    minutes, setMinutes,
@@ -23,16 +22,21 @@ blocks,setBlocks,
 threes,setThrees,
 misc,setMisc,
 currentStat,setCurrentStat] = useContext(CategoryContext);
+const [totalMins,avgMins] = minutes;
+const [totalPts,avgPts] = points;
+
+
   useEffect(() => {
 
-  }, [data]);
+  }, []);
+
 
 
   return <div className="main_container">
     <h3>{currentStat}</h3>
     <p>test</p>
       <StatChanger />
-        {currentStat === 'minutes' &&  <Minutes stat={minutes} /> }
+        {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points stat={points} /> }
 
 

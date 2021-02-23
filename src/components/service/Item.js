@@ -1,11 +1,11 @@
 
-import React,{useContext,useEffect} from 'react';
+import React,{useContext,useEffect,useState} from 'react';
 import { CategoryContext } from "../../context/categoryContext";
 import getHeadshot from './Headshot';
 
 function Item({info}) {
-  let persoId;
-
+  var persoId;
+  const [pID,setpId] = useState (22)
   const [
     data, setData,
     minutes, setMinutes,
@@ -22,7 +22,7 @@ function Item({info}) {
 function getPersoID(firstName,lastName){
 headshotData.filter(item=>{
     if(item.firstName == firstName && item.lastName == lastName)
-      persoId = item.personId
+      setpId(item.personId);
   });
 
 }
@@ -37,9 +37,10 @@ console.log(persoId);
 
 
   return  <div>
-    <li> {persoId}   {info.rank}.{info.score} {info.player.full_name}. {info.player.jersey_number} {info.player.primary_position}{info.teams[0].market} {info.teams[0].name} {persoId}  </li>
+    <li>{info.rank}.-{pID}-{info.score} {info.player.full_name}. {info.player.jersey_number} {info.player.primary_position}{info.teams[0].market} {info.teams[0].name} </li>
 
-    <img src={getHeadshot(info.player.full_name)}/>
+    {/*<img src={getHeadshot(info.player.full_name)}/>*/}
+    <img src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}/>
   </div>;
 }
 

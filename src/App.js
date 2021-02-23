@@ -7,7 +7,6 @@ import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
 
 // MAIN VARIABLE DECLARTIONS
-const { REACT_APP_KEY } = process.env;
 const api = `https://league-leaders-api.herokuapp.com`;
 
 

@@ -7,13 +7,11 @@ function Minutes({totalMins,avgMins}) {
   let currentStat = null;
   orderBy === 'total' ? currentStat = totalMins : currentStat = avgMins;
   let TopTenList= currentStat.ranks.slice(0,10);
-  let list = TopTenList.map(item=> <Item data={item}/>)
+  let list = TopTenList.map(item=> <Item info={item}/>)
 
 
 useEffect(() => {
-console.log(totalMins);
-console.log(avgMins);
-console.log(TopTenList);
+
 
 }, []);
 

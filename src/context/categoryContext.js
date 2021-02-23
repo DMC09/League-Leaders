@@ -14,7 +14,8 @@ const [blocks,setBlocks] = useState([]);
 const [threes,setThrees] = useState([]);
 const [misc,setMisc] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
-// const [orderBy,setOrderBy] = useState(total);
+const [headshotData,setheadshotData] = useState();
+
   return (
     <CategoryContext.Provider
       value={[
@@ -27,7 +28,8 @@ const [currentStat,setCurrentStat] = useState(null);
       blocks,setBlocks,
       threes,setThrees,
       misc,setMisc,
-      currentStat,setCurrentStat
+      currentStat,setCurrentStat,
+      headshotData,setheadshotData
       ]}>
       {props.children}
     </CategoryContext.Provider>

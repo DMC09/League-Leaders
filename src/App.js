@@ -2,27 +2,29 @@
 import "./App.css";
 import React, { useState, useContext, useEffect } from "react";
 import Shell from './components/container/Shell';
-
 import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
 
-// MAIN VARIABLE DECLARTIONS
-const api = `https://league-leaders-api.herokuapp.com`;
+//API Links
+const backEndAPI = `https://league-leaders-api.herokuapp.com`;
+const headShotAPI = `http://data.nba.net/data/10s/prod/v1/2020/players.json`;
 
 
 // COMPONENT
 const App = () => {
-  const [
-    data, setData,
-     minutes, setMinutes,
-     points,setPoints,
-     rebounds,setRebounds,
-     assists,setAssists,
-   steals,setSteals,
- blocks,setBlocks,
+const [
+data, setData,
+minutes, setMinutes,
+points,setPoints,
+rebounds,setRebounds,
+assists,setAssists,
+steals,setSteals,
+blocks,setBlocks,
 threes,setThrees,
 misc,setMisc,
-currentStat,setCurrentStat] = useContext(CategoryContext);
+currentStat,setCurrentStat,
+headshotData,setheadshotData
+] = useContext(CategoryContext);
 
 
   // Meant to run only once after initial render
@@ -41,6 +43,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
 
     getData();
+    getHeadshotData();
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
     setRebounds(filterForRebounds);
@@ -50,18 +53,22 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
     setThrees([...filterForMadeThress,...filterForThreePCT]);
     setMisc([...filterForTurnovers,...filterForPersoFouls,...filterForTechFouls,...filterForFoulOuts])
   }, [data]);
-  useEffect(() => {
-
-    console.log(currentStat,'current state through App')
-
-  }, []);
 
 
   async function getData() {
     try {
-      const response = await axios.get(api);
+      const response = await axios.get(backEndAPI);
       await setData(response.data.data.categories);
 
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  async function getHeadshotData() {
+    try {
+      const response = await axios.get(headShotAPI);
+      await setheadshotData(response.data.league.standard);
+      console.log(headshotData,'this is the head shots data');
     } catch (error) {
       console.error(error);
     }

@@ -29,7 +29,6 @@ headshotData.filter(item=>{
 
 useEffect(() => {
   getPersoID(info.player.first_name,info.player.last_name)
-
 }, []);
 
 
@@ -37,9 +36,7 @@ useEffect(() => {
 
 
   return  <div>
-    <li>{info.rank}.-{pID}-{info.score} {info.player.full_name}. {info.player.jersey_number} {info.player.primary_position}{info.teams[0].market} {info.teams[0].name} </li>
-
-    {/*<img src={getHeadshot(info.player.full_name)}/>*/}
+    <li>{info.rank}.{info.score} {info.player.full_name}. {info.player.jersey_number} {info.player.primary_position}{info.teams[0].market} {info.teams[0].name} </li>
     <img src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}/>
   </div>;
 }

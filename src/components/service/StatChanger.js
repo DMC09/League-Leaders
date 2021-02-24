@@ -13,7 +13,6 @@ blocks,setBlocks,
 threes,setThrees,
 misc,setMisc,
 currentStat,setCurrentStat] = useContext(CategoryContext)
-console.log(minutes,'this is the minutes data is it there?');
 
 
   function handleClick(e) {
@@ -26,10 +25,7 @@ console.log(minutes,'this is the minutes data is it there?');
 
     <button value="minutes" onClick={handleClick}>minutes</button>
     <button value="points" onClick={handleClick}>points</button>
-
-
     {/*
-
       <button value="rebounds" onClick={handleClick}>rebounds</button>
       <button value="assists" onClick={handleClick}>assists</button>
       <button value="steals" onClick={handleClick}>steals</button>

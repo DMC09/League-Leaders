@@ -7,7 +7,7 @@ import axios from "axios";
 
 //API Links
 const backEndAPI = `https://league-leaders-api.herokuapp.com`;
-const headShotAPI = `http://data.nba.net/data/10s/prod/v1/2020/players.json`;
+const headShotAPI = `https://league-leaders-api.herokuapp.com/headshot`;
 
 
 // COMPONENT
@@ -43,7 +43,6 @@ headshotData,setheadshotData
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
 
     getData();
-    getHeadshotData();
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
     setRebounds(filterForRebounds);
@@ -53,6 +52,10 @@ headshotData,setheadshotData
     setThrees([...filterForMadeThress,...filterForThreePCT]);
     setMisc([...filterForTurnovers,...filterForPersoFouls,...filterForTechFouls,...filterForFoulOuts])
   }, [data]);
+  useEffect(() => {
+    getHeadshotData();
+
+  }, []);
 
 
   async function getData() {
@@ -67,7 +70,7 @@ headshotData,setheadshotData
   async function getHeadshotData() {
     try {
       const response = await axios.get(headShotAPI);
-      await setheadshotData(response.data.league.standard);
+      await setheadshotData(response.data.data.league.standard);
     } catch (error) {
       console.error(error);
     }

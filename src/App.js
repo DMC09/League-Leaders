@@ -68,7 +68,6 @@ headshotData,setheadshotData
     try {
       const response = await axios.get(headShotAPI);
       await setheadshotData(response.data.league.standard);
-      console.log(headshotData,'this is the head shots data');
     } catch (error) {
       console.error(error);
     }

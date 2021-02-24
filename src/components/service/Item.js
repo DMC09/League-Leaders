@@ -1,7 +1,7 @@
 
 import React,{useContext,useEffect,useState} from 'react';
 import { CategoryContext } from "../../context/categoryContext";
-import getHeadshot from './Headshot';
+
 
 function Item({info}) {
   var persoId;
@@ -29,7 +29,7 @@ headshotData.filter(item=>{
 
 useEffect(() => {
   getPersoID(info.player.first_name,info.player.last_name)
-console.log(persoId);
+
 }, []);
 
 

@@ -2,6 +2,7 @@ import React,{useEffect,useContext} from "react";
 import { CategoryContext } from "../../context/categoryContext";
 
 function StatChanger() {
+
   const[data, setData,
    minutes, setMinutes,
    points,setPoints,
@@ -12,11 +13,12 @@ blocks,setBlocks,
 threes,setThrees,
 misc,setMisc,
 currentStat,setCurrentStat] = useContext(CategoryContext)
+console.log(minutes,'this is the minutes data is it there?');
 
 
   function handleClick(e) {
     e.preventDefault();
-    console.log(e.target.value);
+
     setCurrentStat(e.target.value)
   }
 

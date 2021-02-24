@@ -42,7 +42,6 @@ headshotData,setheadshotData
     const filterForTechFouls = data && data.filter(set=> set.name === 'tech_fouls');
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
 
-    getData();
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
     setRebounds(filterForRebounds);
@@ -52,9 +51,13 @@ headshotData,setheadshotData
     setThrees([...filterForMadeThress,...filterForThreePCT]);
     setMisc([...filterForTurnovers,...filterForPersoFouls,...filterForTechFouls,...filterForFoulOuts])
   }, [data]);
+
+
   useEffect(() => {
     getHeadshotData();
+    getData();
 
+    console.log('getting the data ');
   }, []);
 
 
@@ -62,7 +65,6 @@ headshotData,setheadshotData
     try {
       const response = await axios.get(backEndAPI);
       await setData(response.data.data.categories);
-
     } catch (error) {
       console.error(error);
     }

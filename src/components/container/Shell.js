@@ -33,7 +33,7 @@ const [totalPts,avgPts] = points;
 
   return <div className="main_container">
 
-      {minutes.length === 0 ? <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>: <StatChanger />}
+      {minutes.length === 0 ? <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>: <StatChanger />}
 
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points stat={points} /> }
@@ -45,7 +45,7 @@ const [totalPts,avgPts] = points;
           {currentStat === 'threes' && <Threes stat={threes} /> }
           {currentStat === 'blocks' && <Blocks stat={blocks} /> }
         */}
-        {minutes.length === 0 && <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
+        {minutes.length === 0 && <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
   </div>;
 }
 

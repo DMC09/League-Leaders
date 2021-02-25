@@ -38,7 +38,7 @@ const [totalRebs,avgRebs] = rebounds;
 
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
-        {currentStat === 'rebounds' && <Rebounds totalRebs={totalRebs} avgRebs={avgRebs} /> }
+        {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} /> }
         {/*
 
           {currentStat === 'assists' && <Assists stat={assists} /> }

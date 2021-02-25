@@ -5,7 +5,7 @@ import { CategoryContext } from "../../context/categoryContext";
 
 function Item({info}) {
   var persoId;
-  const [pID,setpId] = useState (22)
+  const [pID,setpId] = useState ()
   const [
     data, setData,
     minutes, setMinutes,
@@ -29,7 +29,7 @@ headshotData.filter(item=>{
 
 useEffect(() => {
   getPersoID(info.player.first_name,info.player.last_name)
-}, []);
+}, [info]);
 
 
 

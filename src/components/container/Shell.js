@@ -36,7 +36,7 @@ const [totalPts,avgPts] = points;
       {minutes.length === 0 ? <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>: <StatChanger />}
 
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
-        {currentStat === 'points' && <Points stat={points} /> }
+        {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
         {/*
           {currentStat === 'rebounds' && <Rebounds stat={rebounds} /> }
           {currentStat === 'assists' && <Assists stat={assists} /> }

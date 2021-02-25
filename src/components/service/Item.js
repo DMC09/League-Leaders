@@ -29,6 +29,9 @@ headshotData.filter(item=>{
 
 useEffect(() => {
   getPersoID(info.player.first_name,info.player.last_name)
+  console.log(pID,'this is the PID!!!');
+
+
 }, [info]);
 
 

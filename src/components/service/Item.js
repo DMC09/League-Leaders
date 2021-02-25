@@ -3,7 +3,7 @@ import React,{useContext,useEffect,useState} from 'react';
 import { CategoryContext } from "../../context/categoryContext";
 
 
-function Item({info}) {
+function Item({info,index}) {
   var persoId;
   const [pID,setpId] = useState ()
   const [
@@ -29,17 +29,25 @@ headshotData.filter(item=>{
 
 useEffect(() => {
   getPersoID(info.player.first_name,info.player.last_name)
-  console.log(pID,'this is the PID!!!');
+
 
 
 }, [info]);
+useEffect(() => {
+
+
+console.log(index,'this is the info!!')
+
+
+
+}, []);
 
 
 
 
 
   return  <div>
-    <li>{info.rank}. {info.player.full_name} === {info.score}  and he plays for the {info.teams[0].market} {info.teams[0].name}  ({info.player.jersey_number} {info.player.primary_position} ) </li>
+    <li>{info.tied ==='false' ? info.rank:index+1}. {info.player.full_name} === {info.score}  and he plays for the {info.teams[0].market} {info.teams[0].name}  ({info.player.jersey_number} {info.player.primary_position} ) </li>
     <img src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}/>
   </div>;
 }

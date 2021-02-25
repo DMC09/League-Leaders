@@ -36,7 +36,7 @@ useEffect(() => {
 
 
   return  <div>
-    <li>{info.rank}.{info.score} {info.player.full_name}. {info.player.jersey_number} {info.player.primary_position}{info.teams[0].market} {info.teams[0].name} </li>
+    <li>{info.rank}. {info.player.full_name} === {info.score}  and he plays for the {info.teams[0].market} {info.teams[0].name}  ({info.player.jersey_number} {info.player.primary_position} ) </li>
     <img src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}/>
   </div>;
 }

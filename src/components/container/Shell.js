@@ -25,6 +25,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext);
 const [totalMins,avgMins] = minutes;
 const [totalPts,avgPts] = points;
 const [totalRebs,avgRebs] = rebounds;
+const [totalAsts,avgAsts] = assists;
 
 
   useEffect(() => {
@@ -39,9 +40,10 @@ const [totalRebs,avgRebs] = rebounds;
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
         {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} /> }
+        {currentStat === 'assists' && <Assists totalAsts={totalAsts} avgAsts={avgAsts} /> }
         {/*
 
-          {currentStat === 'assists' && <Assists stat={assists} /> }
+
           {currentStat === 'misc' && <Misc stat={misc} /> }
           {currentStat === 'steals' && <Steals stat={steals} /> }
           {currentStat === 'threes' && <Threes stat={threes} /> }

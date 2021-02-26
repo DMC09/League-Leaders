@@ -32,7 +32,6 @@ function Item({ info, index }) {
   function getPersoID(firstName, lastName, fullName) {
 
     if(fullName){
-      console.log('its one of morris twins!!');
       setpId(202694)
     }
     headshotData.filter((item) => {
@@ -56,8 +55,7 @@ function Item({ info, index }) {
   return (
     <div>
       <li>
-        {info.tied === "false" ? info.rank : index + 1}. {info.player.full_name}{" "}
-        === {info.score} and he plays for the {info.teams[0].market}{" "}
+        {info.tied === "false" ? info.rank : index + 1}. {info.player.full_name}=== {info.score < 1 ? `${(info.score*100).toFixed(1)}%`   :info.score} and he plays for the {info.teams[0].market}{" "}
         {info.teams[0].name} ({info.player.jersey_number}{" "}
         {info.player.primary_position} ){" "}
       </li>

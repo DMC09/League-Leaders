@@ -15,8 +15,8 @@ function Rebounds({avgRebs}) {
 console.log(avgRebs);
   }, []);
 
-  return <div className="minutes_container">
-<ul className="list-item-container">{list}</ul>
+  return <div className="stat_container">
+<ul className="stat-items">{list}</ul>
     </div>;
 }
 

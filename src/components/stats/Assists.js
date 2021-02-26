@@ -18,9 +18,9 @@ function Assists({totalAsts,avgAsts}) {
   useEffect(() => {
 
   }, []);
- return <div className="minutes_container">
+ return <div className="stat_container">
   {orderBy === 'total' ? <button onClick={()=>setOrderBy('average')}>show averages</button> : <button onClick={()=>setOrderBy('total')}>show total</button>}
-  <ul className="list-item-container">{list}</ul>
+  <ul className="stat-items">{list}</ul>
       </div>;
 }
 

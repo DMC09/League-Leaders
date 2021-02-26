@@ -1,42 +1,50 @@
+
+@import "./reset.css";
+
 .App {
   text-align: center;
 }
 
 .main_container{
   border: 2px solid purple;
+  border-radius: 15px;
+
 }
 
-.minutes_container {
-  border: 1px dotted green;
-width: 50%;
-margin: 0 auto;
+.stat_container {
+  border: 2px solid black;
+
+width: 100%;
+margin-top: 2rem;
+}
+.headshot{
+  width: 25%;
+  max-width: 100px;
+  border: 2px dashed blue
+}
+.item-container{
+  border:2px solid orange;
+display: flex;
 }
 
+.item-info {
+  border: 2px solid red;
+}
+.stat-items{
+  list-style: none;
+  text-align: left;
+  width: 100%;
+
+
+}
 
 .list-item{
   border: 1px dashed blue;
   padding: 1rem 2rem;
-
-}
-.list-item-container{
-  list-style: none;
-  border: 1px solid red;
-  text-align: left;
-  margin: 0 auto;
+  width: 100%;
 
 }
 
-.item-rank{
-font-size: 3rem;
-
-background: -webkit-linear-gradient( #898989 0%,#ffffff 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
-.item-playerName{
-  color: green;
-}
 
 
 

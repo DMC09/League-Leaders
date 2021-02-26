@@ -24,7 +24,7 @@ function Threes({totalTreys,avgTreys,pctTrys}) {
 
 
 
-  return <div className="minutes_container">
+  return <div className="stat_container">
 
 
 
@@ -33,7 +33,7 @@ function Threes({totalTreys,avgTreys,pctTrys}) {
    {orderBy === 'percentage' && <><button onClick={()=>setOrderBy('average')}>Show averages</button> <button onClick={()=>setOrderBy('total')}>show totals</button></> }
 
 
-   <ul className="list-item-container">{list}</ul>
+   <ul className="stat-items">{list}</ul>
        </div>;
 }
 

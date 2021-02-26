@@ -53,15 +53,15 @@ function Item({ info, index }) {
   }, []);
 
   return (
-    <div>
-      <li>
+    <div className="item-container">
+      <img className='headshot'
+        src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
+        />
+      <li className="item-info">
         {info.tied === "false" ? info.rank : index + 1}. {info.player.full_name}=== {info.score < 1 ? `${(info.score*100).toFixed(1)}%`   :info.score} and he plays for the {info.teams[0].market}{" "}
         {info.teams[0].name} ({info.player.jersey_number}{" "}
         {info.player.primary_position} ){" "}
       </li>
-      <img
-        src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
-      />
     </div>
   );
 }

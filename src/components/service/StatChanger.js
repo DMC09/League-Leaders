@@ -28,12 +28,13 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
     <button value="assists" onClick={handleClick}>assists</button>
     <button value="steals" onClick={handleClick}>steals</button>
     <button value="blocks" onClick={handleClick}>blocks</button>
+    <button value="threes" onClick={handleClick}>threes</button>
     {/*
 
 
 
 
-      <button value="threes" onClick={handleClick}>threes</button>
+
       <button value="misc" onClick={handleClick}>Misc</button>
       */}
 

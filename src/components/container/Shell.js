@@ -28,6 +28,7 @@ const [totalRebs,avgRebs] = rebounds;
 const [totalAsts,avgAsts] = assists;
 const [totalStls,avgStls] = steals;
 const [totalBlks,avgBlks] = blocks;
+const [totalTreys,avgTreys,pctTrys] = threes;
 
 
   useEffect(() => {
@@ -45,9 +46,10 @@ const [totalBlks,avgBlks] = blocks;
         {currentStat === 'assists' && <Assists totalAsts={totalAsts} avgAsts={avgAsts} /> }
         {currentStat === 'steals' && <Steals totalStls={totalStls} avgStls={avgStls} /> }
         {currentStat === 'blocks' && <Blocks totalBlks={totalBlks} avgBlks={avgBlks}/> }
+        {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
         {/*
           {currentStat === 'misc' && <Misc stat={misc} /> }
-          {currentStat === 'threes' && <Threes stat={threes} /> }
+
 
         */}
         {minutes.length === 0 &&  <span className="skeleton-box" style={{width:"100px",height:"80px"}}></span> }

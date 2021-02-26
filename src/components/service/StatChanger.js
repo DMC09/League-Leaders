@@ -22,13 +22,13 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
 
   return <div className="state_changer-container">
 
-    <button value="minutes" onClick={handleClick}>minutes</button>
-    <button value="points" onClick={handleClick}>points</button>
-    <button value="rebounds" onClick={handleClick}>rebounds</button>
-    <button value="assists" onClick={handleClick}>assists</button>
-    <button value="steals" onClick={handleClick}>steals</button>
-    <button value="blocks" onClick={handleClick}>blocks</button>
-    <button value="threes" onClick={handleClick}>threes</button>
+    <button className="stat_change-btn" value="minutes" onClick={handleClick}>minutes</button>
+    <button className="stat_change-btn" value="points" onClick={handleClick}>points</button>
+    <button className="stat_change-btn" value="rebounds" onClick={handleClick}>rebounds</button>
+    <button className="stat_change-btn" value="assists" onClick={handleClick}>assists</button>
+    <button className="stat_change-btn" value="steals" onClick={handleClick}>steals</button>
+    <button className="stat_change-btn" value="blocks" onClick={handleClick}>blocks</button>
+    <button className="stat_change-btn" value="threes" onClick={handleClick}>threes</button>
     {/*
 
 

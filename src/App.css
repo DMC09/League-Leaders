@@ -1,6 +1,9 @@
 
 @import "./reset.css";
 
+
+
+
 .App {
   text-align: center;
 }
@@ -11,6 +14,19 @@
 
 }
 
+.state_changer-container{
+  border: 2px solid green;
+  width: 100%;
+  height: 200px;
+  overflow-x: scroll;
+}
+
+.stat_change-btn{
+  height: 50px;
+  width: 100px;
+}
+
+
 .stat_container {
   border: 2px solid black;
 
@@ -19,7 +35,9 @@ margin-top: 2rem;
 }
 .headshot{
   width: 25%;
-  max-width: 100px;
+  height: 25%;
+  max-height: 75px;
+  max-width: 75px;
   border: 2px dashed blue
 }
 .item-container{
@@ -47,6 +65,9 @@ display: flex;
 
 
 
+/* items css  */
+
+/* animatinos */
 
 
 

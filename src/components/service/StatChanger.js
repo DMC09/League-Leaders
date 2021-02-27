@@ -19,16 +19,38 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
     e.preventDefault();
     setCurrentStat(e.target.value)
   }
+  function handleChange(e) {
+    e.preventDefault();
+    setCurrentStat(e.target.value)
+  }
 
   return <div className="state_changer-container">
-
-    <button className="stat_change-btn" value="minutes" onClick={handleClick}>minutes</button>
-    <button className="stat_change-btn" value="points" onClick={handleClick}>points</button>
-    <button className="stat_change-btn" value="rebounds" onClick={handleClick}>rebounds</button>
-    <button className="stat_change-btn" value="assists" onClick={handleClick}>assists</button>
-    <button className="stat_change-btn" value="steals" onClick={handleClick}>steals</button>
-    <button className="stat_change-btn" value="blocks" onClick={handleClick}>blocks</button>
-    <button className="stat_change-btn" value="threes" onClick={handleClick}>threes</button>
+    <select className="drowndown" onChange={handleChange}>
+          <option className="drowndown" >
+            Select Stat
+          </option>
+          <option className="drowndown-option" value="minutes">
+            Minutes
+          </option>
+          <option className="drowndown-option" value="points">
+            Points
+          </option>
+          <option className="drowndown-option" value="rebounds">
+            Rebounds
+          </option>
+          <option className="drowndown-option" value="assists">
+            Assists
+          </option>
+          <option className="drowndown-option" value="steals">
+            Steals
+          </option>
+          <option className="drowndown-option" value="blocks">
+            Blocks
+          </option>
+          <option className="drowndown-option" value="threes">
+            Threes
+          </option>
+        </select>
     {/*
 
 

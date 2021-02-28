@@ -49,8 +49,6 @@ const [totalTreys,avgTreys,pctTrys] = threes;
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
         {/*
           {currentStat === 'misc' && <Misc stat={misc} /> }
-
-
         */}
 
   </div>;

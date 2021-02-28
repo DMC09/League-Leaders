@@ -27,14 +27,20 @@ html {
 .headshot-container {
   flex-basis: 40%;
   text-align: center;
+  /* background: black; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #17408b;
 }
 .headshot {
   width: 100%;
   /* height: 100%; */
+
 }
 
 /* main Item container */
 .item-container {
+
   margin: 1rem 0;
   height: 150px;
   display: flex;
@@ -54,7 +60,8 @@ position: relative;
   font-size: 2.5rem;
 position: absolute;
 left: 5px;
-  background: -webkit-linear-gradient(#000 0%, #fff 100%);
+  background: -webkit-linear-gradient(#fff 0%, #17408b 100%);
+  /* background: #fff; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -69,9 +76,11 @@ top: 2px;
 }
 .item-jersey{
 font-size: 0.8rem;
+color: white;
 }
 .item-position{
 font-size: 0.8rem;
+color: white;
 
 }
 
@@ -107,11 +116,13 @@ text-align: center;
   font-size: 1.5rem;
 }
 .item-teamMarket{
-
+font-size: .8rem;
+color: white;
 }
 
 .item-teamName{
-
+font-size: .8rem;
+color: white;
 }
 /* items css  */
 

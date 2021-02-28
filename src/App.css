@@ -1,61 +1,79 @@
 
 @import "./reset.css";
+body,html{
+  background: #ccc;
 
-
-
-
+}
 .App {
   text-align: center;
+
 }
 
 .main_container{
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   border-radius: 15px;
 
 }
 
 .state_changer-container{
-  border: 2px solid green;
+padding-top: 2rem;
   width: 100%;
 }
 
-.stat_change-btn{
-  height: 50px;
-  width: 100px;
-}
 
 
 .stat_container {
-  border: 2px solid black;
 
-width: 100%;
+  margin: 0 auto;
+background: #ccc;
+width: 90%;
 margin-top: 2rem;
 }
 
-.dropdown{
-  background: red;
-  color:red;
-  font-size: 4rem;
-}
-.dropdown-option{
-  background: purple;
-  color:purple;
-  font-size: 4rem;
+
+.headshot-container{
+  flex-basis: 40%;
+
 }
 .headshot{
-  width: 25%;
-  height: 25%;
-  max-height: 75px;
-  max-width: 75px;
-  border: 2px dashed blue
+  width: 100%;
+  height: 100%;
+
+
 }
 .item-container{
-  border:2px solid orange;
+
+margin: 1rem 0;
 display: flex;
-}
+border-radius: 10px;
+background: #fff;
+
+-webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+        }
 
 .item-info {
-  border: 2px solid red;
+
+
+flex-basis: 60%;
+
+}
+
+.item-rank{
+  font-size: 2.5rem;
+
+
+
+  background: -webkit-linear-gradient(#000 0%, #fff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.item-jersey_position{
+
+  width: 25px;
+  text-align: center;
 }
 .stat-items{
   list-style: none;
@@ -102,4 +120,20 @@ display: flex;
 	 100% {
 		 transform: translateX(100%);
 	}
+}
+
+/* desktop */
+@media only screen and (min-width: 768px){
+
+
+  .main_container{
+    border: 2px solid orange;
+    border-radius: 15px;
+    background: blue;
+
+  }
+
+  .item-info{
+
+  }
 }

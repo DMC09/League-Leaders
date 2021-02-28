@@ -58,12 +58,20 @@ function Item({ info, index }) {
       <img className='headshot'
         src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
         />
+        <div className="item-teamMarketName">
+               <span className="item-teamMarket">{info.teams[0].market}</span>{" "}
+                <span className="item-teamName">{info.teams[0].name}</span>
+                </div>
       </div>
+
       <li className="item-info">
         <span className="item-rank">{info.tied === "false" ? info.rank : index + 1}</span>
+<div className="item-NameScore">
+<span className="item-name">{info.player.full_name}</span>
+<span className="item-score">{info.score < 1 ? `${(info.score*100).toFixed(1)}%`  :info.score} {currentStat}</span>
+</div>
 
-       {info.player.full_name} {info.score < 1 ? `${(info.score*100).toFixed(1)}%`   :info.score}  {info.teams[0].market}{" "}
-        {info.teams[0].name}
+
 <div className="item-jersey_position">
         {info.player.jersey_number}
         <hr />

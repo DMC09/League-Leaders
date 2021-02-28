@@ -55,6 +55,12 @@ function Item({ info, index }) {
   return (
     <div className="item-container">
       <div className="headshot-container">
+        <span className="item-rank">{info.tied === "false" ? info.rank : index + 1}</span>
+          <div className="item-jersey_position">
+              <span className="item-jersey">{info.player.jersey_number}</span>
+              <hr />
+              <span className="item-position">{info.player.primary_position}</span>
+              </div>
       <img className='headshot'
         src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
         />
@@ -65,18 +71,14 @@ function Item({ info, index }) {
       </div>
 
       <li className="item-info">
-        <span className="item-rank">{info.tied === "false" ? info.rank : index + 1}</span>
+
 <div className="item-NameScore">
 <span className="item-name">{info.player.full_name}</span>
 <span className="item-score">{info.score < 1 ? `${(info.score*100).toFixed(1)}%`  :info.score} {currentStat}</span>
 </div>
 
 
-<div className="item-jersey_position">
-        {info.player.jersey_number}
-        <hr />
-        {info.player.primary_position}
-        </div>
+
       </li>
     </div>
   );

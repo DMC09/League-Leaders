@@ -38,7 +38,7 @@ const [totalTreys,avgTreys,pctTrys] = threes;
 
   return <div className="main_container">
 
-      {minutes.length === 0 ?  <span className="skeleton-box" style={{width:"100px",height:"80px"}}></span>: <StatChanger />}
+      {minutes.length === 0 ?  <span className="skeleton-box" style={{width:"50px",height:"20px"}}></span>: <StatChanger />}
 
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
@@ -52,7 +52,7 @@ const [totalTreys,avgTreys,pctTrys] = threes;
 
 
         */}
-        {minutes.length === 0 &&  <span className="skeleton-box" style={{width:"100px",height:"80px"}}></span> }
+
   </div>;
 }
 

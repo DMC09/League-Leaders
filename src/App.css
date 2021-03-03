@@ -21,7 +21,7 @@ h1{
 
 }
 .state_changer-container {
-  padding-top: 4rem;
+  padding: 2rem 0;
   width: 100%;
   border-bottom:  2px solid black;
   background: #17408b;

@@ -5,6 +5,10 @@ import {v4 as uuidv4 } from 'uuid';
 
 
 function Rebounds({avgRebs}) {
+  const mystyle = {
+      paddingTop: "3.5rem",
+
+    };
   const[orderBy,setOrderBy] = useState('average');
   let currentStat = avgRebs ;
   let TopTenList= currentStat.ranks.slice(0,10);
@@ -15,7 +19,7 @@ function Rebounds({avgRebs}) {
 console.log(avgRebs);
   }, []);
 
-  return <div className="stat_container">
+  return <div style={mystyle}className="stat_container">
 <ul className="stat-items">{list}</ul>
     </div>;
 }

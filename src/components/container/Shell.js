@@ -37,7 +37,6 @@ const [totalTreys,avgTreys,pctTrys] = threes;
 
 
   return <div className="main_container">
-    <h1>League Leaders App</h1>
 
        <StatChanger />
 

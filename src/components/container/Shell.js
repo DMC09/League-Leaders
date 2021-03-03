@@ -39,7 +39,7 @@ const [totalTreys,avgTreys,pctTrys] = threes;
   return <div className="main_container">
     <h1>League Leaders App</h1>
 
-      {minutes.length === 0 ?  <span className="skeleton-box" style={{width:"50px",height:"20px"}}></span>: <StatChanger />}
+       <StatChanger />
 
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }

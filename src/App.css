@@ -14,17 +14,37 @@ html {
 
 }
 
+h1{
+  padding-top: 1rem;
+  background: #17408b;
+  border: 0;
 
+}
 .state_changer-container {
   padding-top: 2rem;
   width: 100%;
+  border-bottom:  2px solid black;
+  background: #17408b;
 }
+
+select{
+  margin-bottom: 1rem;
+}
+
 
 .stat_container {
   margin: 0 auto;
   /* background: #ccc; */
   width: 90%;
-  margin-top: 2rem;
+
+}
+
+.stat_container button{
+  border: 0;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .headshot-container {

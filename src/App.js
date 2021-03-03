@@ -78,7 +78,7 @@ headshotData,setheadshotData
     }
   }
   return <div className="App">
-<h1>League Leaders App</h1>
+
 <Shell />
   </div>;
 };

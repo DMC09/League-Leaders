@@ -10,7 +10,10 @@ html {
 .main_container {
   /* border: 2px solid purple; */
   border-radius: 15px;
+  background: #ccc;
+
 }
+
 
 .state_changer-container {
   padding-top: 2rem;
@@ -19,7 +22,7 @@ html {
 
 .stat_container {
   margin: 0 auto;
-  background: #ccc;
+  /* background: #ccc; */
   width: 90%;
   margin-top: 2rem;
 }
@@ -160,10 +163,65 @@ color: white;
 
 /* desktop */
 @media only screen and (min-width: 768px) {
+
+.state_changer-container{
+  border-bottom: 2px solid black;
+
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 0rem;
+height: 75px;
+}
+
+select.dropdown{
+  height: 30px;
+width: 200px;
+
+
+}
+
+.stat_container{
+  margin-top: 0rem;
+}
+.stat_container button {
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  font-size: 1.25rem;
+  margin: 0;
+
+}
+
+.item-container{
+  height: 200px;
+}
+
+
+.item-teamMarketName > span{
+  font-size: 1.25rem;
+}
+img.headshot{
+  height: auto;
+  width: 70%;
+  max-width: 300px;
+  max-height:  300px;
+}
+  .App{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+  }
   .main_container {
     border: 2px solid orange;
     border-radius: 15px;
-    background: blue;
+    background: #ccc;
+
+    width: 75%;
+    max-width:800px;
   }
 
   .item-info {

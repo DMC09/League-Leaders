@@ -42,7 +42,7 @@ const [totalTreys,avgTreys,pctTrys] = threes;
 
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
-        {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} /> }
+        {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} totalRebs={totalRebs} /> }
         {currentStat === 'assists' && <Assists totalAsts={totalAsts} avgAsts={avgAsts} /> }
         {currentStat === 'steals' && <Steals totalStls={totalStls} avgStls={avgStls} /> }
         {currentStat === 'blocks' && <Blocks totalBlks={totalBlks} avgBlks={avgBlks}/> }

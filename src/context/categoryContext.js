@@ -15,7 +15,6 @@ const [threes,setThrees] = useState([]);
 const [turnovers,setTurnovers] = useState([]);
 const [fouls,setFouls] = useState([]);
 const [techfoulouts,setTechFoulOuts] = useState([]);
-const [misc,setMisc] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
 const [headshotData,setheadshotData] = useState();
 

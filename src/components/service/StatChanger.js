@@ -41,11 +41,11 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
           <option className="drowndown-option" value="points">
             Points
           </option>
-          <option className="drowndown-option" value="rebounds">
-            Rebounds
-          </option>
           <option className="drowndown-option" value="assists">
             Assists
+          </option>
+          <option className="drowndown-option" value="rebounds">
+            Rebounds
           </option>
           <option className="drowndown-option" value="steals">
             Steals
@@ -55,6 +55,12 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
           </option>
           <option className="drowndown-option" value="threes">
             Threes
+          </option>
+          <option className="drowndown-option" value="turnovers">
+            Turnovers
+          </option>
+          <option className="drowndown-option" value="techfoulouts">
+            Technical Fouls/Foul Outs
           </option>
         </select>
     {/*

@@ -40,11 +40,18 @@ select{
 }
 
 .stat_container button{
-  border: 0;
-  padding: 1rem;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  background: #C9082A;
+  color: white;
+
+padding: 1rem;
+cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+
+
 }
 
 .headshot-container {

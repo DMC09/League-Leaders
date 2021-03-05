@@ -12,6 +12,9 @@ const [assists,setAssists] = useState([]);
 const [steals,setSteals] = useState([]);
 const [blocks,setBlocks] = useState([]);
 const [threes,setThrees] = useState([]);
+const [turnovers,setTurnovers] = useState([]);
+const [fouls,setFouls] = useState([]);
+const [techfoulouts,setTechFoulOuts] = useState([]);
 const [misc,setMisc] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
 const [headshotData,setheadshotData] = useState();
@@ -27,7 +30,9 @@ const [headshotData,setheadshotData] = useState();
       steals,setSteals,
       blocks,setBlocks,
       threes,setThrees,
-      misc,setMisc,
+      turnovers,setTurnovers,
+      fouls,setFouls,
+      techfoulouts,setTechFoulOuts,
       currentStat,setCurrentStat,
       headshotData,setheadshotData
       ]}>

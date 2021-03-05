@@ -20,7 +20,9 @@ assists,setAssists,
 steals,setSteals,
 blocks,setBlocks,
 threes,setThrees,
-misc,setMisc,
+fouls,setFouls,
+techfoulouts,setTechFoulOuts,
+turnovers,setTurnovers,
 currentStat,setCurrentStat,
 headshotData,setheadshotData
 ] = useContext(CategoryContext);
@@ -48,7 +50,9 @@ headshotData,setheadshotData
     setSteals(filterForSteals);
     setBlocks(filterForBlocks)
     setThrees([...filterForMadeThress,...filterForThreePCT]);
-    setMisc([...filterForTurnovers,...filterForPersoFouls,...filterForTechFouls,...filterForFoulOuts])
+    setTurnovers(filterForTurnovers);
+    setFouls(filterForPersoFouls);
+    setTechFoulOuts([...filterForTechFouls,...filterForFoulOuts])
   }, [data]);
 
 

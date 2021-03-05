@@ -12,7 +12,9 @@ function StatChanger() {
  steals,setSteals,
 blocks,setBlocks,
 threes,setThrees,
-misc,setMisc,
+turnovers,setTurnovers,
+fouls,setFouls,
+techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat] = useContext(CategoryContext)
 
 
@@ -56,6 +58,9 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
           <option className="drowndown-option" value="threes">
             Threes
           </option>
+          <option className="drowndown-option" value="fouls">
+            Fouls
+          </option>
           <option className="drowndown-option" value="turnovers">
             Turnovers
           </option>
@@ -63,14 +68,6 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
             Technical Fouls/Foul Outs
           </option>
         </select>
-    {/*
-
-
-
-
-
-      <button value="misc" onClick={handleClick}>Misc</button>
-      */}
 
   </div>
   ;

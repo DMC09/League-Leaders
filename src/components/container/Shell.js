@@ -3,11 +3,11 @@ import StatChanger from '../service/StatChanger';
 import Assists from '../stats/Assists';
 import Blocks from '../stats/Blocks';
 import Minutes from '../stats/Minutes';
-import Misc from '../stats/Misc';
 import Points from '../stats/Points';
 import Rebounds from '../stats/Rebounds';
 import Steals from '../stats/Steals';
 import Threes from '../stats/Threes';
+import Fouls from '../stats/Fouls';
 import { CategoryContext } from "../../context/categoryContext";
 
 
@@ -20,7 +20,9 @@ function Shell(props) {
  steals,setSteals,
 blocks,setBlocks,
 threes,setThrees,
-misc,setMisc,
+turnovers,setTurnovers,
+fouls,setFouls,
+techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat] = useContext(CategoryContext);
 const [totalMins,avgMins] = minutes;
 const [totalPts,avgPts] = points;
@@ -29,6 +31,7 @@ const [totalAsts,avgAsts] = assists;
 const [totalStls,avgStls] = steals;
 const [totalBlks,avgBlks] = blocks;
 const [totalTreys,avgTreys,pctTrys] = threes;
+const [totalFouls,avgFouls] = threes;
 
 
   useEffect(() => {
@@ -46,9 +49,8 @@ const [totalTreys,avgTreys,pctTrys] = threes;
         {currentStat === 'steals' && <Steals totalStls={totalStls} avgStls={avgStls} /> }
         {currentStat === 'blocks' && <Blocks totalBlks={totalBlks} avgBlks={avgBlks}/> }
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
-        {/*
-          {currentStat === 'misc' && <Misc stat={misc} /> }
-        */}
+        {currentStat === 'fouls' && <Fouls totalFouls={totalFouls} avgFouls={avgFouls}  /> }
+      
 
   </div>;
 }

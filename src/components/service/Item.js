@@ -21,8 +21,9 @@ function Item({ info, index }) {
     setBlocks,
     threes,
     setThrees,
-    misc,
-    setMisc,
+    turnovers,setTurnovers,
+    fouls,setFouls,
+    techfoulouts,setTechFoulOuts,
     currentStat,
     setCurrentStat,
     headshotData,
@@ -51,7 +52,7 @@ function Item({ info, index }) {
 
   return (
 
-    
+
     <div className="item-container">
       <div className="headshot-container">
         <span className="item-rank">

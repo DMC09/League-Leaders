@@ -39,7 +39,6 @@ const [totalTreys,avgTreys,pctTrys] = threes;
   return <div className="main_container">
 
        <StatChanger />
-
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
         {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} totalRebs={totalRebs} /> }

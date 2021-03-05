@@ -1,5 +1,6 @@
 import React,{useEffect,useContext} from "react";
 import { CategoryContext } from "../../context/categoryContext";
+import Logo from '../../Logo.png';
 
 function StatChanger() {
 
@@ -24,9 +25,12 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
     setCurrentStat(e.target.value)
   }
 
-  return <div className="state_changer-container">
+  return <div className="stat_changer-container">
 
-
+    <img
+      className="logo"
+      src={Logo}
+    />
     <select className="drowndown" onChange={handleChange}>
           <option className="drowndown" >
             Select Stat

@@ -4,7 +4,6 @@ import React, { useState, useContext, useEffect } from "react";
 import Shell from './components/container/Shell';
 import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
-
 //API Links
 const backEndAPI = `https://league-leaders-api.herokuapp.com`;
 const headShotAPI = `https://league-leaders-api.herokuapp.com/headshot`;

@@ -20,15 +20,27 @@ h1{
   border: 0;
 
 }
-.state_changer-container {
-  padding: 2rem 0;
+.stat_changer-container {
+
   width: 100%;
   border-bottom:  2px solid black;
   background: #17408b;
+  display: flex;
+  flex-flow: column;
+justify-content:space-around;
+
+  align-items: center;
 }
 
 select{
   margin-bottom: 1rem;
+  width: 50%;
+}
+
+img.logo{
+padding: 1rem 0;
+  height: 100px;
+  width: 150px;
 }
 
 
@@ -200,7 +212,7 @@ color: white;
 .main_container{
   border-radius: 10px;
 }
-.state_changer-container{
+.stat_changer-container{
   border-bottom: 2px solid black;
 
 display: flex;
@@ -246,6 +258,7 @@ img.headshot{
   max-width: 300px;
   max-height:  300px;
 }
+
   .App{
     display: flex;
     justify-content: center;

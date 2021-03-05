@@ -12,8 +12,8 @@ function StatChanger() {
  steals,setSteals,
 blocks,setBlocks,
 threes,setThrees,
-turnovers,setTurnovers,
 fouls,setFouls,
+turnovers,setTurnovers,
 techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat] = useContext(CategoryContext)
 

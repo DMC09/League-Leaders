@@ -20,8 +20,8 @@ function Shell(props) {
  steals,setSteals,
 blocks,setBlocks,
 threes,setThrees,
-turnovers,setTurnovers,
 fouls,setFouls,
+turnovers,setTurnovers,
 techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat] = useContext(CategoryContext);
 const [totalMins,avgMins] = minutes;
@@ -31,7 +31,7 @@ const [totalAsts,avgAsts] = assists;
 const [totalStls,avgStls] = steals;
 const [totalBlks,avgBlks] = blocks;
 const [totalTreys,avgTreys,pctTrys] = threes;
-const [totalFouls,avgFouls] = threes;
+const [totalFouls,avgFouls] = fouls;
 
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const [totalFouls,avgFouls] = threes;
         {currentStat === 'blocks' && <Blocks totalBlks={totalBlks} avgBlks={avgBlks}/> }
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
         {currentStat === 'fouls' && <Fouls totalFouls={totalFouls} avgFouls={avgFouls}  /> }
-      
+
 
   </div>;
 }

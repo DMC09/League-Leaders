@@ -21,8 +21,8 @@ steals,setSteals,
 blocks,setBlocks,
 threes,setThrees,
 fouls,setFouls,
-techfoulouts,setTechFoulOuts,
 turnovers,setTurnovers,
+techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat,
 headshotData,setheadshotData
 ] = useContext(CategoryContext);

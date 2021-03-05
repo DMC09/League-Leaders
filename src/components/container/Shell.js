@@ -8,6 +8,7 @@ import Rebounds from '../stats/Rebounds';
 import Steals from '../stats/Steals';
 import Threes from '../stats/Threes';
 import Fouls from '../stats/Fouls';
+import Turnovers from '../stats/Turnovers';
 import { CategoryContext } from "../../context/categoryContext";
 
 
@@ -32,6 +33,7 @@ const [totalStls,avgStls] = steals;
 const [totalBlks,avgBlks] = blocks;
 const [totalTreys,avgTreys,pctTrys] = threes;
 const [totalFouls,avgFouls] = fouls;
+const [totalTurnovers,avgTurnovers] = turnovers;
 
 
   useEffect(() => {
@@ -50,6 +52,7 @@ const [totalFouls,avgFouls] = fouls;
         {currentStat === 'blocks' && <Blocks totalBlks={totalBlks} avgBlks={avgBlks}/> }
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
         {currentStat === 'fouls' && <Fouls totalFouls={totalFouls} avgFouls={avgFouls}  /> }
+        {currentStat === 'turnovers' && <Turnovers totalTurnovers={totalTurnovers} avgTurnovers={avgTurnovers}  /> }
 
 
   </div>;

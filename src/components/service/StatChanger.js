@@ -68,6 +68,10 @@ function StatChanger() {
             Turnovers
           </option>
         </select>
+        <div className="button-container">
+          <button>Total</button>
+          <button>Average</button>
+        </div>
   </div>
   ;
 }

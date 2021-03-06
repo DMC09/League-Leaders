@@ -6,7 +6,7 @@ function Assists({totalAsts,avgAsts}) {
 
 
   let viewingStat = totalAsts;
-  // orderBy === 'total' ?  currentStat = totalAsts:  currentStat = avgAsts
+
 
   let TopTenList= viewingStat.ranks.slice(0,10);
   let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)

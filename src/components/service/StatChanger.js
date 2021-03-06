@@ -4,7 +4,7 @@ import Logo from '../../Logo.png';
 
 function StatChanger() {
 
-  const [orderBy,setOrderBy] = useState('total');
+
 
   const[data, setData,
    minutes, setMinutes,

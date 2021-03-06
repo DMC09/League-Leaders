@@ -1,4 +1,4 @@
-import React,{useEffect, useContext} from "react";
+import React,{useEffect, useContext,useState} from "react";
 import StatChanger from '../service/StatChanger';
 import Assists from '../stats/Assists';
 import Blocks from '../stats/Blocks';
@@ -13,6 +13,9 @@ import { CategoryContext } from "../../context/categoryContext";
 
 
 function Shell(props) {
+
+
+
   const [data, setData,
    minutes, setMinutes,
    points,setPoints,
@@ -53,7 +56,6 @@ const [totalTurnovers,avgTurnovers] = turnovers;
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
         {currentStat === 'fouls' && <Fouls totalFouls={totalFouls} avgFouls={avgFouls}  /> }
         {currentStat === 'turnovers' && <Turnovers totalTurnovers={totalTurnovers} avgTurnovers={avgTurnovers}  /> }
-
 
   </div>;
 }

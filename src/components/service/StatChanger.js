@@ -4,8 +4,6 @@ import Logo from '../../Logo.png';
 
 function StatChanger() {
 
-
-
   const[data, setData,
    minutes, setMinutes,
    points,setPoints,
@@ -68,10 +66,10 @@ function StatChanger() {
             Turnovers
           </option>
         </select>
-        <div className="button-container">
+      {currentStat !== null  &&  <div className="button-container">
           <button>Total</button>
           <button>Average</button>
-        </div>
+        </div> }
   </div>
   ;
 }

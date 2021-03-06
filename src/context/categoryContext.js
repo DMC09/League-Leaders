@@ -3,7 +3,6 @@ export const CategoryContext = createContext();
 
 
 export const CategoryProvider = (props) =>{
-
 const [data,setData] = useState([]);
 const [minutes,setMinutes] = useState([]);
 const [points,setPoints] = useState([]);
@@ -17,6 +16,7 @@ const [turnovers,setTurnovers] = useState([]);
 const [techfoulouts,setTechFoulOuts] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
 const [headshotData,setheadshotData] = useState();
+
 
   return (
     <CategoryContext.Provider

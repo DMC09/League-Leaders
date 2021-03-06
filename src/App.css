@@ -1,4 +1,6 @@
 @import "./reset.css";
+
+/* GENERAL */
 body,
 html {
   background: #ccc;
@@ -8,26 +10,23 @@ html {
 }
 
 .main_container {
-  /* border: 2px solid purple; */
   border-radius: 15px;
   background: #ccc;
+  height: 100vh;
 }
-
-h1 {
-  padding-top: 1rem;
-  background: #17408b;
-  border: 0;
-}
+/* STAT CHANGER AKA TOP PORTION */
 .stat_changer-container {
+  height: 20vh;
+  position: sticky;
   width: 100%;
   border-bottom: 2px solid black;
   background: #17408b;
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-
   align-items: center;
 }
+/* STAT AKA ACTUAL STATS PORTION */
 
 select {
   margin-bottom: 1rem;
@@ -44,6 +43,9 @@ img.logo {
   margin: 0 auto;
   /* background: #ccc; */
   width: 90%;
+  height: 80vh;
+  overflow: scroll;
+
 }
 
 .stat_container button {
@@ -93,7 +95,6 @@ img.logo {
   position: absolute;
   left: 5px;
   background: -webkit-linear-gradient(#fff 0%, #17408b 100%);
-  /* background: #fff; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

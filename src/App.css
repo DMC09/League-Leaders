@@ -30,13 +30,14 @@ html {
 
 select {
   margin-bottom: 1rem;
-  width: 50%;
+
 }
 
 img.logo {
   padding: 1rem 0;
-  height: 100px;
-  width: 150px;
+  width: 33%;
+  max-width: 100px;
+  margin-right: 2rem;
 }
 
 .stat_container {
@@ -44,7 +45,7 @@ img.logo {
   /* background: #ccc; */
   width: 90%;
   height: 80vh;
-  overflow: scroll;
+  overflow-y: scroll;
 
 }
 
@@ -53,6 +54,7 @@ img.logo {
   color: white;
   padding: 1rem;
   cursor: pointer;
+
   border-radius: 10px;
   border: 1px solid black;
   -webkit-box-shadow: 0 10px 6px -6px #777;
@@ -200,15 +202,17 @@ img.logo {
 
   .main_container {
     border-radius: 10px;
+    height: 90vh;
+
   }
   .stat_changer-container {
     border-bottom: 2px solid black;
-
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 0rem;
-    height: 75px;
+    height: 200px;
+
     border-radius: 10px;
   }
 
@@ -218,7 +222,7 @@ img.logo {
   }
 
   .stat_container {
-    margin-top: 0rem;
+  height: 75%;
   }
   .stat_container button {
     border: none;

@@ -20,6 +20,7 @@ console.log(totalMins,'players total minutes data')
 
 
   return <div className="stat_container">
+
 {orderBy === 'total' ? <button onClick={()=>setOrderBy('average')}>show averages</button> : <button onClick={()=>setOrderBy('total')}>show total</button>}
 <ul className="stat-items">{list}</ul>
     </div>;

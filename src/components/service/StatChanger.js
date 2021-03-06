@@ -1,26 +1,29 @@
-import React,{useEffect,useContext} from "react";
+import React,{useEffect,useContext,useState} from "react";
 import { CategoryContext } from "../../context/categoryContext";
 import Logo from '../../Logo.png';
 
 function StatChanger() {
+
+  const [orderBy,setOrderBy] = useState('total');
 
   const[data, setData,
    minutes, setMinutes,
    points,setPoints,
    rebounds,setRebounds,
    assists,setAssists,
- steals,setSteals,
-blocks,setBlocks,
-threes,setThrees,
-fouls,setFouls,
-turnovers,setTurnovers,
-techfoulouts,setTechFoulOuts,
-currentStat,setCurrentStat] = useContext(CategoryContext)
+   steals,setSteals,
+    blocks,setBlocks,
+  threes,setThrees,
+  fouls,setFouls,
+  turnovers,setTurnovers,
+  techfoulouts,setTechFoulOuts,
+  currentStat,setCurrentStat
+] = useContext(CategoryContext)
 
 
   function handleClick(e) {
     e.preventDefault();
-    setCurrentStat(e.target.value)
+
   }
   function handleChange(e) {
     e.preventDefault();
@@ -64,9 +67,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
           <option className="drowndown-option" value="turnovers">
             Turnovers
           </option>
-
         </select>
-
   </div>
   ;
 }

@@ -64,9 +64,7 @@ currentStat,setCurrentStat] = useContext(CategoryContext)
           <option className="drowndown-option" value="turnovers">
             Turnovers
           </option>
-          <option className="drowndown-option" value="techfoulouts">
-            Technical Fouls/Foul Outs
-          </option>
+
         </select>
 
   </div>

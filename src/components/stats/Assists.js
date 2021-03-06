@@ -5,10 +5,10 @@ import {v4 as uuidv4 } from 'uuid';
 function Assists({totalAsts,avgAsts}) {
 
 
-  let currentStat = totalAsts;
+  let viewingStat = totalAsts;
   // orderBy === 'total' ?  currentStat = totalAsts:  currentStat = avgAsts
 
-  let TopTenList= currentStat.ranks.slice(0,10);
+  let TopTenList= viewingStat.ranks.slice(0,10);
   let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
@@ -19,7 +19,7 @@ function Assists({totalAsts,avgAsts}) {
 
   }, []);
  return <div className="stat_container">
-  
+
   <ul className="stat-items">{list}</ul>
       </div>;
 }

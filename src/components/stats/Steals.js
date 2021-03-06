@@ -6,10 +6,10 @@ import {v4 as uuidv4 } from 'uuid';
 function Steals({totalStls,avgStls}) {
 
 
-  let currentStat =totalStls;
+  let viewingStat =totalStls;
 
 
-  let TopTenList= currentStat.ranks.slice(0,10);
+  let TopTenList= viewingStat.ranks.slice(0,10);
   let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 

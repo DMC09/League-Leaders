@@ -24,7 +24,6 @@ function Rebounds({totalRebs,avgRebs}) {
     let viewingStat= totalRebs;
     if(orderBy === 'total') { viewingStat= totalRebs};
     if(orderBy === 'average') { viewingStat= avgRebs};
-
     let TopTenList= viewingStat.ranks.slice(0,10);
     let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 

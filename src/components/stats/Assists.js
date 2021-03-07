@@ -1,9 +1,25 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useState,useContext} from 'react';
+import { CategoryContext } from "../../context/categoryContext";
+
 import Item from '../service/Item';
 import {v4 as uuidv4 } from 'uuid';
 
 function Assists({totalAsts,avgAsts}) {
-
+  const[data, setData,
+   minutes, setMinutes,
+   points,setPoints,
+   rebounds,setRebounds,
+   assists,setAssists,
+   steals,setSteals,
+    blocks,setBlocks,
+  threes,setThrees,
+  fouls,setFouls,
+  turnovers,setTurnovers,
+  techfoulouts,setTechFoulOuts,
+  currentStat,setCurrentStat,
+  headshotData,setheadshotData,
+  orderBy,setOrderBy,
+  ] = useContext(CategoryContext)
 
   let viewingStat = totalAsts;
 

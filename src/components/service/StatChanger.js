@@ -15,9 +15,17 @@ function StatChanger() {
   fouls,setFouls,
   turnovers,setTurnovers,
   techfoulouts,setTechFoulOuts,
-  currentStat,setCurrentStat
+  currentStat,setCurrentStat,
+  headshotData,setheadshotData,
+  orderBy,setOrderBy,
 ] = useContext(CategoryContext)
 
+
+useEffect(() => {
+
+
+  console.log(orderBy,'this is the total!!');
+}, []);
 
   function handleClick(e) {
     e.preventDefault();

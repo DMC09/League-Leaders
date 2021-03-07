@@ -27,7 +27,9 @@ threes,setThrees,
 fouls,setFouls,
 turnovers,setTurnovers,
 techfoulouts,setTechFoulOuts,
-currentStat,setCurrentStat] = useContext(CategoryContext);
+currentStat,setCurrentStat,
+headshotData,setheadshotData,
+orderBy,setOrderBy] = useContext(CategoryContext);
 const [totalMins,avgMins] = minutes;
 const [totalPts,avgPts] = points;
 const [totalRebs,avgRebs] = rebounds;

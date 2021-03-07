@@ -24,7 +24,8 @@ fouls,setFouls,
 turnovers,setTurnovers,
 techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat,
-headshotData,setheadshotData
+headshotData,setheadshotData,
+orderBy,setOrderBy
 ] = useContext(CategoryContext);
 
 

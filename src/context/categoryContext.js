@@ -16,6 +16,7 @@ const [turnovers,setTurnovers] = useState([]);
 const [techfoulouts,setTechFoulOuts] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
 const [headshotData,setheadshotData] = useState();
+const [orderBy,setOrderBy] = useState('total');
 
 
   return (
@@ -33,7 +34,8 @@ const [headshotData,setheadshotData] = useState();
       turnovers,setTurnovers,
       techfoulouts,setTechFoulOuts,
       currentStat,setCurrentStat,
-      headshotData,setheadshotData
+      headshotData,setheadshotData,
+      orderBy,setOrderBy
       ]}>
       {props.children}
     </CategoryContext.Provider>

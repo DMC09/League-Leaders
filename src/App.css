@@ -49,17 +49,19 @@ img.logo {
 
 }
 
-.stat_container button {
+.stat_changer-container button {
   background: #c9082a;
   color: white;
-  padding: 1rem;
   cursor: pointer;
-
   border-radius: 10px;
   border: 1px solid black;
   -webkit-box-shadow: 0 10px 6px -6px #777;
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
+}
+
+.stat_changer-container button[disabled] {
+    background:grey;
 }
 
 .headshot-container {

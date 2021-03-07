@@ -44,7 +44,7 @@ useEffect(() => {
     />
     <select className="drowndown" onChange={handleChange}>
           <option className="drowndown" >
-            Select Stat
+            {data.length !== 0 ? "Select Stat":"Loading...."}
           </option>
           <option className="drowndown-option" value="minutes">
             Minutes
@@ -73,11 +73,20 @@ useEffect(() => {
           <option className="drowndown-option" value="turnovers">
             Turnovers
           </option>
+          <option className="drowndown-option" value="technicals">
+            Technicals
+          </option>
+          <option className="drowndown-option" value="foul outs">
+            Foul Outs
+          </option>
         </select>
+
+
+
       {currentStat !== null  &&  <div className="button-container">
         <button disabled={orderBy==="total"} onClick={()=>setOrderBy('total')}>Total</button>
           <button disabled={orderBy==="average"} onClick={()=>setOrderBy('average')}>Averages</button>
-      {currentStat=='threes' &&   <button onClick={()=>setOrderBy('percentage')}>Percentages</button>}
+      {currentStat == 'threes' &&  <button onClick={()=>setOrderBy('percentage')}>Percentages</button>}
         </div> }
   </div>
   ;

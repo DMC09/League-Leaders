@@ -50,18 +50,28 @@ img.logo {
 }
 
 .stat_changer-container button {
-  background: #c9082a;
+  background: grey;
   color: white;
   cursor: pointer;
+  margin: 0 0.2rem ;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
   border: 1px solid black;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
+  -webkit-box-shadow: 0 10px 6px -6px #000;
+  -moz-box-shadow: 0 10px 6px -6px #000;
+  box-shadow: 0 10px 6px -6px #000;
+  transition: all .3s ease-in-out .2s;
+}
+
+.stat_changer-container button:hover{
+  transform: scale(1.1);
+  background:#c9082a;
+
 }
 
 .stat_changer-container button[disabled] {
-    background:grey;
+    background:#c9082a;
+    transform: scale(1.1);
 }
 
 .headshot-container {

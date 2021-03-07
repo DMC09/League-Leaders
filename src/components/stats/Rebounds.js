@@ -1,4 +1,5 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useState,useContext} from 'react';
+import { CategoryContext } from "../../context/categoryContext";
 import Item from '../service/Item';
 import {v4 as uuidv4 } from 'uuid';
 
@@ -7,11 +8,8 @@ import {v4 as uuidv4 } from 'uuid';
 function Rebounds({totalRebs,avgRebs}) {
 
     let viewingStat= totalRebs;
-
-
-
-  let TopTenList= viewingStat.ranks.slice(0,10);
-  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+    let TopTenList= viewingStat.ranks.slice(0,10);
+    let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
   useEffect(() => {

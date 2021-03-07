@@ -20,10 +20,7 @@ function Assists({totalAsts,avgAsts}) {
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)
 
-  useEffect(() => {
 
-    console.log(orderBy,'This is the assits componets ');
-  }, []);
 
   let viewingStat;
   if(orderBy === 'total') { viewingStat= totalAsts};

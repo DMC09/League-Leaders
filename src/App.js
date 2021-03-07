@@ -11,8 +11,8 @@ const headShotAPI = `https://league-leaders-api.herokuapp.com/headshot`;
 
 // COMPONENT
 const App = () => {
-const [
-data, setData,
+const [data, setData,
+headshotData,setheadshotData,
 minutes, setMinutes,
 points,setPoints,
 rebounds,setRebounds,
@@ -24,7 +24,6 @@ fouls,setFouls,
 turnovers,setTurnovers,
 techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat,
-headshotData,setheadshotData,
 orderBy,setOrderBy
 ] = useContext(CategoryContext);
 

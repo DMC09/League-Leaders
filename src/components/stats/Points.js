@@ -7,6 +7,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 function Points({totalPts,avgPts}) {
   const[data, setData,
+    headshotData,setheadshotData,
    minutes, setMinutes,
    points,setPoints,
    rebounds,setRebounds,
@@ -18,7 +19,6 @@ function Points({totalPts,avgPts}) {
   turnovers,setTurnovers,
   techfoulouts,setTechFoulOuts,
   currentStat,setCurrentStat,
-  headshotData,setheadshotData,
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)
   let viewingStat = totalPts ;

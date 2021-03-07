@@ -7,6 +7,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 function Blocks({totalBlks,avgBlks}) {
   const[data, setData,
+    headshotData,setheadshotData,
    minutes, setMinutes,
    points,setPoints,
    rebounds,setRebounds,
@@ -18,7 +19,6 @@ function Blocks({totalBlks,avgBlks}) {
   turnovers,setTurnovers,
   techfoulouts,setTechFoulOuts,
   currentStat,setCurrentStat,
-  headshotData,setheadshotData,
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)
 

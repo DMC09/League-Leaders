@@ -17,6 +17,7 @@ function Shell(props) {
 
 
   const [data, setData,
+    headshotData,setheadshotData,
    minutes, setMinutes,
    points,setPoints,
    rebounds,setRebounds,
@@ -28,8 +29,8 @@ fouls,setFouls,
 turnovers,setTurnovers,
 techfoulouts,setTechFoulOuts,
 currentStat,setCurrentStat,
-headshotData,setheadshotData,
 orderBy,setOrderBy] = useContext(CategoryContext);
+
 const [totalMins,avgMins] = minutes;
 const [totalPts,avgPts] = points;
 const [totalRebs,avgRebs] = rebounds;

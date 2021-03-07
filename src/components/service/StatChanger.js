@@ -5,18 +5,18 @@ import Logo from '../../Logo.png';
 function StatChanger() {
 
   const[data, setData,
-   minutes, setMinutes,
-   points,setPoints,
-   rebounds,setRebounds,
-   assists,setAssists,
-   steals,setSteals,
-    blocks,setBlocks,
+  headshotData,setheadshotData,
+  minutes, setMinutes,
+  points,setPoints,
+  rebounds,setRebounds,
+  assists,setAssists,
+  steals,setSteals,
+  blocks,setBlocks,
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
   techfoulouts,setTechFoulOuts,
   currentStat,setCurrentStat,
-  headshotData,setheadshotData,
   orderBy,setOrderBy,
 ] = useContext(CategoryContext)
 

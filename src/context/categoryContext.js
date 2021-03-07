@@ -4,6 +4,7 @@ export const CategoryContext = createContext();
 
 export const CategoryProvider = (props) =>{
 const [data,setData] = useState([]);
+const [headshotData,setheadshotData] = useState();
 const [minutes,setMinutes] = useState([]);
 const [points,setPoints] = useState([]);
 const [rebounds,setRebounds] = useState([]);
@@ -15,14 +16,14 @@ const [fouls,setFouls] = useState([]);
 const [turnovers,setTurnovers] = useState([]);
 const [techfoulouts,setTechFoulOuts] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
-const [headshotData,setheadshotData] = useState();
+
 const [orderBy,setOrderBy] = useState('total');
 
 
   return (
     <CategoryContext.Provider
-      value={[
-      data,setData,
+      value={[data,setData,
+      headshotData,setheadshotData,
       minutes,setMinutes,
       points,setPoints,
       rebounds,setRebounds,
@@ -34,7 +35,6 @@ const [orderBy,setOrderBy] = useState('total');
       turnovers,setTurnovers,
       techfoulouts,setTechFoulOuts,
       currentStat,setCurrentStat,
-      headshotData,setheadshotData,
       orderBy,setOrderBy
       ]}>
       {props.children}

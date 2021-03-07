@@ -4,9 +4,10 @@ import { CategoryContext } from "../../context/categoryContext";
 function Item({ info, index }) {
   var persoId;
   const [pID, setpId] = useState();
-  const [
-    data,
+  const [data,
     setData,
+    headshotData,
+    setheadshotData,
     minutes,
     setMinutes,
     points,
@@ -26,8 +27,7 @@ function Item({ info, index }) {
     techfoulouts,setTechFoulOuts,
     currentStat,
     setCurrentStat,
-    headshotData,
-    setheadshotData,
+
   ] = useContext(CategoryContext);
 
   function getPersoID(firstName, lastName, fullName) {

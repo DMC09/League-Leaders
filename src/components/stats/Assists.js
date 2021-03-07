@@ -5,6 +5,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 function Assists({totalAsts,avgAsts}) {
   const[data, setData,
+    headshotData,setheadshotData,
    minutes, setMinutes,
    points,setPoints,
    rebounds,setRebounds,
@@ -16,7 +17,6 @@ function Assists({totalAsts,avgAsts}) {
   turnovers,setTurnovers,
   techfoulouts,setTechFoulOuts,
   currentStat,setCurrentStat,
-  headshotData,setheadshotData,
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)
 

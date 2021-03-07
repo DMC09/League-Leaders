@@ -21,8 +21,14 @@ function Assists({totalAsts,avgAsts}) {
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)
 
-  let viewingStat = totalAsts;
+  useEffect(() => {
 
+    console.log(orderBy,'This is the assits componets ');
+  }, []);
+
+  let viewingStat;
+  if(orderBy === 'total') { viewingStat= totalAsts};
+  if(orderBy === 'average') { viewingStat= avgAsts};
 
   let TopTenList= viewingStat.ranks.slice(0,10);
   let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)

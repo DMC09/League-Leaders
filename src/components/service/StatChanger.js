@@ -75,8 +75,9 @@ useEffect(() => {
           </option>
         </select>
       {currentStat !== null  &&  <div className="button-container">
-          <button>Total</button>
-          <button>Average</button>
+          <button onClick={()=>setOrderBy('total')}>Total</button>
+          <button onClick={()=>setOrderBy('average')}>Averages</button>
+
         </div> }
   </div>
   ;

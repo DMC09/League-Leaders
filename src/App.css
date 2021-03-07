@@ -72,6 +72,7 @@ img.logo {
 .stat_changer-container button[disabled] {
     background:#c9082a;
     transform: scale(1.1);
+    cursor: default;
 }
 
 .headshot-container {

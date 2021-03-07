@@ -23,7 +23,6 @@ function Rebounds({totalRebs,avgRebs}) {
   ] = useContext(CategoryContext)
     let viewingStat= totalRebs;
     if(orderBy === 'total') { viewingStat= totalRebs};
-
     if(orderBy === 'average') { viewingStat= avgRebs};
 
     let TopTenList= viewingStat.ranks.slice(0,10);

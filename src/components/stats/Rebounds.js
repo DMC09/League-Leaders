@@ -6,8 +6,26 @@ import {v4 as uuidv4 } from 'uuid';
 
 
 function Rebounds({totalRebs,avgRebs}) {
-
+  const[data, setData,
+   minutes, setMinutes,
+   points,setPoints,
+   rebounds,setRebounds,
+   assists,setAssists,
+   steals,setSteals,
+    blocks,setBlocks,
+  threes,setThrees,
+  fouls,setFouls,
+  turnovers,setTurnovers,
+  techfoulouts,setTechFoulOuts,
+  currentStat,setCurrentStat,
+  headshotData,setheadshotData,
+  orderBy,setOrderBy,
+  ] = useContext(CategoryContext)
     let viewingStat= totalRebs;
+    if(orderBy === 'total') { viewingStat= totalRebs};
+
+    if(orderBy === 'average') { viewingStat= avgRebs};
+
     let TopTenList= viewingStat.ranks.slice(0,10);
     let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 

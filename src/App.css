@@ -36,14 +36,14 @@ select {
 img.logo {
 
   width: 33%;
-  max-width: 100px;
+  max-width: 80px;
 
 }
 
 .stat_container {
   margin: 0 auto;
   /* background: #ccc; */
-  width: 90%;
+  width: 95%;
   height: 73vh;
   overflow-y: scroll;
 
@@ -54,7 +54,7 @@ img.logo {
   color: white;
   cursor: pointer;
   margin: 0 0.2rem ;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   border-radius: 10px;
   border: 1px solid black;
   -webkit-box-shadow: 0 10px 6px -6px #000;

@@ -1,6 +1,7 @@
 import React,{useEffect,useContext,useState} from "react";
 import { CategoryContext } from "../../context/categoryContext";
 import Logo from '../../Logo.png';
+import Logo2 from '../../Logo2.png';
 
 function StatChanger() {
 
@@ -40,7 +41,7 @@ useEffect(() => {
 
     <img
       className="logo"
-      src={Logo}
+      src={Logo2}
     />
     <select className="drowndown" onChange={handleChange}>
           <option className="drowndown" >

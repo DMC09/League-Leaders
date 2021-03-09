@@ -209,21 +209,31 @@ img.logo {
   body,
   html {
     background: #fff;
-  }
+    justify-content: flex-start;
 
+  }
+  .App {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    align-items: center;
+    height: 100vh;
+  }
   .main_container {
-    border-radius: 10px;
-    height: 90vh;
+    margin: 2rem 0;
+    border-radius: 15px;
+    background: #ccc;
+    width: 75%;
+    max-width: 800px;
 
   }
   .stat_changer-container {
     border-bottom: 2px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding-top: 0rem;
     height: 200px;
-
     border-radius: 10px;
   }
 
@@ -233,7 +243,7 @@ img.logo {
   }
 
   .stat_container {
-  height: 75%;
+width: initial;
   }
   .stat_container button {
     border: none;
@@ -243,6 +253,11 @@ img.logo {
     border-right: 1px solid black;
     font-size: 1.25rem;
     margin: 0;
+  }
+  .stat-items{
+    width: 97%;
+padding-left: 1rem;
+
   }
 
   .item-container {
@@ -257,21 +272,6 @@ img.logo {
     width: 70%;
     max-width: 300px;
     max-height: 300px;
-  }
-
-  .App {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    align-items: center;
-  }
-  .main_container {
-    margin-top: 2rem;
-    border-radius: 15px;
-    background: #ccc;
-
-    width: 75%;
-    max-width: 800px;
   }
 
   .item-info {

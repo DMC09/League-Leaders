@@ -83,13 +83,14 @@ img.logo {
   background: #17408b;
 }
 .headshot {
-  width: 100%;
+  width: 90%;
+  max-width: 150px;
+
 }
 
 /* main Item container */
 .item-container {
   margin: 1rem 0;
-  height: 150px;
   display: flex;
   border-radius: 10px;
   background: #fff;
@@ -133,7 +134,7 @@ img.logo {
   text-align: left;
   width: 95%;
   padding-left: 0.5rem;
-  
+
 }
 
 .list-item {
@@ -150,10 +151,9 @@ img.logo {
 .item-NameScore {
   display: flex;
   flex-flow: column;
-
   height: 100%;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   text-align: center;
 }
 .item-score {
@@ -165,12 +165,12 @@ img.logo {
 }
 .item-teamMarket {
   font-size: 0.8rem;
-  color: white;
+  color: black;
 }
 
 .item-teamName {
   font-size: 0.8rem;
-  color: white;
+  color: black;
 }
 /* items css  */
 
@@ -263,11 +263,11 @@ padding-left: 1rem;
   }
 
   .item-container {
-    height: 200px;
+    height: 165px;
   }
 
   .item-teamMarketName > span {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
   }
   img.headshot {
     height: auto;

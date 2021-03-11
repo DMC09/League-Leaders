@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
 
+
+
 function Item({ info, index }) {
   var persoId;
   const [pID, setpId] = useState();
@@ -67,7 +69,6 @@ function Item({ info, index }) {
           className="headshot"
           src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
         />
-
       </div>
 
       <li className="item-info">
@@ -76,6 +77,7 @@ function Item({ info, index }) {
             <div className="item-teamMarketName">
               <span className="item-teamMarket">{info.teams[0].market}</span>{" "}
               <span className="item-teamName">{info.teams[0].name}</span>
+
             </div>
           <span className="item-score">
             {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}{" "}

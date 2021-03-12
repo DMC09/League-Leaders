@@ -39,6 +39,12 @@ img.logo {
   max-width: 80px;
 
 }
+img.team-logo {
+
+  width: 33%;
+  max-width: 80px;
+
+}
 
 .stat_container {
   margin: 0 auto;

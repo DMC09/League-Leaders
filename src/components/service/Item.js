@@ -78,6 +78,14 @@ console.log(teamlogoname,'this is the state that shows the team name')
           className="headshot"
           src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
         />
+      <img
+          className="team-logo"
+          src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
+        />
+      {  /*<img
+          className="headshot"
+          src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/Bucks.png`}
+        />*/}
       </div>
 
       <li className="item-info">

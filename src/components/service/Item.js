@@ -5,6 +5,7 @@ import { CategoryContext } from "../../context/categoryContext";
 
 function Item({ info, index }) {
   var persoId;
+
   const [pID, setpId] = useState();
   const [teamlogoname, setTeamlogoname] = useState();
   const [data,
@@ -32,8 +33,21 @@ function Item({ info, index }) {
     setCurrentStat,
 
   ] = useContext(CategoryContext);
+  let Background = `https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`;
 
-  function getPersoID(firstName, lastName, fullName) {
+const mystyle = {
+backgroundImage: `url(${Background})`,
+height: "100%",
+width: "100%",
+backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+
+
+    };
+
+
+function getPersoID(firstName, lastName, fullName) {
     if (fullName) {
       setpId(202694);
     }
@@ -42,12 +56,11 @@ function Item({ info, index }) {
         setpId(item.personId);
     });
   }
-
-
 function getTeamLogo(teamName){
+if(teamName === "Trail Blazers "){setTeamlogoname('Trail%20Blazers')}
+
   setTeamlogoname(teamName)
 }
-
   useEffect(() => {
     getTeamLogo(info.teams[0].name)
     getPersoID(
@@ -56,11 +69,8 @@ function getTeamLogo(teamName){
       info.player.full_name
     );
   }, [info]);
-
-  useEffect(() => {
-console.log(teamlogoname,'this is the state that shows the team name')
-  }, []);
-
+console.log(teamlogoname,'this is the team name')
+console.log(Background,'this is the url')
   return (
 
 
@@ -82,11 +92,11 @@ console.log(teamlogoname,'this is the state that shows the team name')
 
       </div>
       <li className="item-info">
-        <div className="item-NameScore">
-          <img
+        <div style={mystyle} className="item-NameScore">
+        { /* <img
               className="team-logo"
               src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
-            />
+            />*/}
           <span className="item-name">{info.player.full_name}</span>
             <div className="item-teamMarketName">
               <span className="item-teamMarket">{info.teams[0].market}</span>{" "}

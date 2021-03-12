@@ -41,9 +41,8 @@ height: "100%",
 width: "100%",
 backgroundPosition: 'center',
   backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat'
-
-
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 80,
     };
 
 
@@ -57,9 +56,8 @@ function getPersoID(firstName, lastName, fullName) {
     });
   }
 function getTeamLogo(teamName){
-if(teamName === "Trail Blazers "){setTeamlogoname('Trail%20Blazers')}
-
-  setTeamlogoname(teamName)
+console.log(teamName)
+  setTeamlogoname(teamName.split(" ").join(""))
 }
   useEffect(() => {
     getTeamLogo(info.teams[0].name)
@@ -69,8 +67,7 @@ if(teamName === "Trail Blazers "){setTeamlogoname('Trail%20Blazers')}
       info.player.full_name
     );
   }, [info]);
-console.log(teamlogoname,'this is the team name')
-console.log(Background,'this is the url')
+
   return (
 
 
@@ -93,10 +90,7 @@ console.log(Background,'this is the url')
       </div>
       <li className="item-info">
         <div style={mystyle} className="item-NameScore">
-        { /* <img
-              className="team-logo"
-              src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
-            />*/}
+
           <span className="item-name">{info.player.full_name}</span>
             <div className="item-teamMarketName">
               <span className="item-teamMarket">{info.teams[0].market}</span>{" "}
@@ -113,4 +107,8 @@ console.log(Background,'this is the url')
   );
 }
 
+{ /* <img
+      className="team-logo"
+      src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
+    />*/}
 export default Item;

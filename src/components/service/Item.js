@@ -93,8 +93,7 @@ console.log(teamName)
 
           <span className="item-name">{info.player.full_name}</span>
             <div className="item-teamMarketName">
-              <span className="item-teamMarket">{info.teams[0].market}</span>{" "}
-              <span className="item-teamName">{info.teams[0].name}</span>
+            
 
             </div>
           <span className="item-score">

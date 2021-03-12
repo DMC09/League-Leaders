@@ -6,6 +6,7 @@ import { CategoryContext } from "../../context/categoryContext";
 function Item({ info, index }) {
   var persoId;
   const [pID, setpId] = useState();
+  const [teamlogoname, setTeamlogoname] = useState();
   const [data,
     setData,
     headshotData,
@@ -42,7 +43,13 @@ function Item({ info, index }) {
     });
   }
 
+
+function getTeamLogo(teamName){
+  setTeamlogoname(teamName)
+}
+
   useEffect(() => {
+    getTeamLogo(info.teams[0].name)
     getPersoID(
       info.player.first_name,
       info.player.last_name,
@@ -50,7 +57,9 @@ function Item({ info, index }) {
     );
   }, [info]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+console.log(teamlogoname,'this is the state that shows the team name')
+  }, []);
 
   return (
 

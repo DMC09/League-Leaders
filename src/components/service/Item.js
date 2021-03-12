@@ -78,18 +78,15 @@ console.log(teamlogoname,'this is the state that shows the team name')
           className="headshot"
           src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
         />
-      <img
-          className="team-logo"
-          src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
-        />
-      {  /*<img
-          className="headshot"
-          src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/Bucks.png`}
-        />*/}
-      </div>
 
+
+      </div>
       <li className="item-info">
         <div className="item-NameScore">
+          <img
+              className="team-logo"
+              src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
+            />
           <span className="item-name">{info.player.full_name}</span>
             <div className="item-teamMarketName">
               <span className="item-teamMarket">{info.teams[0].market}</span>{" "}

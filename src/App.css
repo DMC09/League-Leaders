@@ -85,7 +85,9 @@ img.team-logo {
   text-align: center;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: #17408b;
+  /* background: #17408b; */
+  background: rgb(23,64,139);
+  background: radial-gradient(circle, rgba(23,64,139,0.8155637254901961) 0%, rgba(23,64,139,1) 51%, rgba(0,0,0,1) 100%);
 }
 .headshot {
   width: 90%;

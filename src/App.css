@@ -167,7 +167,8 @@ img.team-logo {
 }
 
 .item-name {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+text-decoration: underline;
 }
 .item-teamMarket {
   font-size: 0.8rem;
@@ -177,6 +178,13 @@ img.team-logo {
 .item-teamName {
   font-size: 0.8rem;
   color: black;
+}
+
+.team-logo{
+  height: 50%;
+  width: 50px;
+  margin: 0 auto;
+  opacity: 0.5;
 }
 /* items css  */
 
@@ -226,6 +234,9 @@ img.team-logo {
     flex-flow: column;
     align-items: center;
     height: 100vh;
+  }
+  .team-logo{
+    width: 100px;
   }
   .main_container {
     margin: 2rem 0;

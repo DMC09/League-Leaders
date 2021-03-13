@@ -33,7 +33,7 @@ function Item({ info, index }) {
     setCurrentStat,
 
   ] = useContext(CategoryContext);
-  let Background = `https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`;
+  let Background = ``;
 
 const mystyle = {
 backgroundImage: `url(${Background})`,
@@ -89,13 +89,12 @@ console.log(teamName)
 
       </div>
       <li className="item-info">
-        <div style={mystyle} className="item-NameScore">
-
+        <div className="item-NameScore">
           <span className="item-name">{info.player.full_name}</span>
-            <div className="item-teamMarketName">
-            
-
-            </div>
+            <img
+              className="team-logo"
+              src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
+            />
           <span className="item-score">
             {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}{" "}
             {currentStat}

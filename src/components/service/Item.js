@@ -31,7 +31,7 @@ function Item({ info, index }) {
     techfoulouts,setTechFoulOuts,
     currentStat,
     setCurrentStat,
-
+orderBy,setOrderBy,
   ] = useContext(CategoryContext);
   let Background = ``;
 
@@ -97,7 +97,11 @@ console.log(teamName)
             />
           <span className="item-score">
             {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}{" "}
+            {orderBy === "percentage" && "of "}
             {currentStat}
+            {" "}
+            {orderBy === "total" && ""}
+            {orderBy === "average" && " per game"}
           </span>
         </div>
       </li>

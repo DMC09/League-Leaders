@@ -35,13 +35,10 @@ select {
 
 img.logo {
 
-  width: 33%;
-  max-width: 80px;
+  width: 50%;
 
 }
 img.team-logo {
-
-
 
 }
 
@@ -165,12 +162,12 @@ img.team-logo {
   text-align: center;
 }
 .item-score {
-  color: #666666;
+
 }
 
 .item-name {
   font-size: 1.25rem;
-text-decoration: underline;
+font-weight: bold;
 }
 .item-teamMarket {
   font-size: 0.8rem;

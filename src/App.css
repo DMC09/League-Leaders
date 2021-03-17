@@ -234,6 +234,9 @@ font-weight: bold;
     align-items: center;
     height: 100vh;
   }
+  img.logo{
+    max-width: 250px;
+  }
   .team-logo{
     width: 100px;
   }

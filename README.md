@@ -12,4 +12,4 @@ A simple Full-Stack React Application to see who is Leading the NBA in their res
 
 
 ## Screenshots
-<img src="https://earlsribpalace.com/wp-content/uploads/2019/07/coming-soon-store-placeholder-image.gif" alt="placeholder" width="600"/>
+<img src="https://raw.githubusercontent.com/DMC09/Image-storage/main/LeagueLeaders.png" alt="placeholder" width="600"/>

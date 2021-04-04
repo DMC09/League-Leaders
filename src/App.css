@@ -76,7 +76,26 @@ img.team-logo {
     transform: scale(1.1);
     cursor: default;
 }
+/* main items  */
+.stat-items {
+  list-style: none;
+  text-align: left;
+  width: 95%;
+  padding-left: 0.5rem;
 
+}
+.item-container {
+  margin: 1rem 0;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+/* Headshot section */
 .headshot-container {
   flex-basis: 40%;
   text-align: center;
@@ -86,28 +105,6 @@ img.team-logo {
   background: rgb(23,64,139);
   background: radial-gradient(circle, rgba(23,64,139,0.8155637254901961) 0%, rgba(23,64,139,1) 51%, rgba(0,0,0,1) 100%);
 }
-.headshot {
-  width: 90%;
-  max-width: 150px;
-
-}
-
-/* main Item container */
-.item-container {
-  margin: 1rem 0;
-  display: flex;
-  border-radius: 10px;
-  background: #fff;
-  position: relative;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
-}
-
-.item-info {
-  flex-basis: 60%;
-}
-
 .item-rank {
   font-size: 2.5rem;
   position: absolute;
@@ -116,7 +113,6 @@ img.team-logo {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .item-jersey_position {
   width: 25px;
   text-align: center;
@@ -132,27 +128,14 @@ img.team-logo {
   font-size: 0.8rem;
   color: white;
 }
-
-.stat-items {
-  list-style: none;
-  text-align: left;
-  width: 95%;
-  padding-left: 0.5rem;
-
+.headshot {
+  width: 90%;
+  max-width: 150px;
 }
-
-.list-item {
-  border: 1px dashed blue;
-  padding: 1rem 2rem;
-  width: 100%;
+/* Item info section  */
+.item-info {
+  flex-basis: 40%;
 }
-.item-teamMarketName {
-  text-align: center;
-  margin-top: 1rem;
-  opacity: 1;
-}
-
-/* item main info */
 .item-NameScore {
   display: flex;
   flex-flow: column;
@@ -161,29 +144,26 @@ img.team-logo {
   justify-content: space-around;
   text-align: center;
 }
-.item-score {
-
-}
-
 .item-name {
   font-size: 1.25rem;
-font-weight: bold;
+  font-weight: bold;
 }
-.item-teamMarket {
-  font-size: 0.8rem;
-  color: black;
-}
-
-.item-teamName {
-  font-size: 0.8rem;
-  color: black;
-}
-
+/* Team Logo section  */
 .team-logo{
-  height: 50%;
   width: 50px;
   margin: 0 auto;
   opacity: 0.5;
+}
+.team-logo-container{
+
+background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
+  flex-basis: 20%;
+  max-width: 200px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: grid;
+  place-items:center;
 }
 /* items css  */
 

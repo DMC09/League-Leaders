@@ -102,16 +102,10 @@ console.log(teamName)
           className="headshot"
           src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
         />
-
-
       </div>
-      <li className="item-info">
+      <div className="item-info">
         <div className="item-NameScore">
           <span className="item-name">{info.player.full_name}</span>
-            <img
-              className="team-logo"
-              src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
-            />
           <span className="item-score">
             {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}{" "}
             {orderBy === "percentage" && "of "}
@@ -121,7 +115,14 @@ console.log(teamName)
             {orderBy === "average" && " per game"}
           </span>
         </div>
-      </li>
+      </div>
+      <div className="team-logo-container">
+        <img
+          className="team-logo"
+          src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
+        />
+      </div>
+
     </div>
   );
 }

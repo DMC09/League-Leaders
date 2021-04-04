@@ -23,7 +23,7 @@ html {
   background: #17408b;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 /* STAT AKA ACTUAL STATS PORTION */
@@ -36,7 +36,7 @@ select {
 img.logo {
 
   width: 50%;
-
+max-width: 200px;
 }
 img.team-logo {
 

@@ -148,8 +148,12 @@ img.team-logo {
   text-align: center;
 }
 .item-name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
+
+}
+.item-score {
+  font-size: 1.25rem;
 }
 /* Team Logo section  */
 .team-logo{

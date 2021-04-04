@@ -50,9 +50,22 @@ function getPersoID(firstName, lastName, fullName) {
   console.log(fullName);
   // Junior/Seniors special logic
     if (fullName === "Marcus Morris Sr.") setpId(202694);
-    if (fullName === "Michael Porter Jr.") setpId(1629008);
     if (fullName === "Troy Brown Jr.") setpId(1628972);
     if (fullName === "Vernon Carey Jr.") setpId(1630176);
+    if (fullName === "Wendell Carter Jr.") setpId(1628976);
+    if (fullName === "Tim Hardaway Jr.") setpId(203501);
+    if (fullName === "Danuel House Jr.") setpId(1627863);
+    if (fullName === "Jaren Jackson Jr.") setpId(1628991);
+    if (fullName === "Derrick Jones Jr.") setpId(1627884);
+    if (fullName === "Kira Lewis Jr.") setpId(1630184);
+    if (fullName === "Kenyon Martin Jr.") setpId(1630231);
+    if (fullName === "Larry Nance Jr.") setpId(1626204);
+    if (fullName === "Kelly Oubre Jr.") setpId(1626162);
+    if (fullName === "Michael Porter Jr.") setpId(1629008);
+    if (fullName === "Kevin Porter Jr.") setpId(1629645);
+    if (fullName === "Otto Porter Jr.") setpId(203490);
+    if (fullName === "Dennis Smith Jr.") setpId(1628372);
+    if (fullName === "Gary Trent Jr.") setpId(1629018);
 
     headshotData.filter((item) => {
       if (item.firstName == firstName && item.lastName == lastName)

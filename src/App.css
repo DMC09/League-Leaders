@@ -148,12 +148,12 @@ img.team-logo {
   text-align: center;
 }
 .item-name {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 
 }
 .item-score {
-  font-size: 1.25rem;
+  font-size: 0.9rem;
 }
 /* Team Logo section  */
 .team-logo{
@@ -219,6 +219,14 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 
     flex-flow: column;
     align-items: center;
     height: 100vh;
+  }
+  .item-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+  }
+  .item-score {
+    font-size: 1.25rem;
   }
   img.logo{
     max-width: 250px;

@@ -47,9 +47,13 @@ backgroundPosition: 'center',
 
 
 function getPersoID(firstName, lastName, fullName) {
-    if (fullName) {
-      setpId(202694);
-    }
+  console.log(fullName);
+  // Junior/Seniors special logic
+    if (fullName === "Marcus Morris Sr.") setpId(202694);
+    if (fullName === "Michael Porter Jr.") setpId(1629008);
+    if (fullName === "Troy Brown Jr.") setpId(1628972);
+    if (fullName === "Vernon Carey Jr.") setpId(1630176);
+
     headshotData.filter((item) => {
       if (item.firstName == firstName && item.lastName == lastName)
         setpId(item.personId);

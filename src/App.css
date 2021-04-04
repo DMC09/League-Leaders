@@ -135,6 +135,9 @@ img.team-logo {
 /* Item info section  */
 .item-info {
   flex-basis: 40%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
 }
 .item-NameScore {
   display: flex;
@@ -155,7 +158,6 @@ img.team-logo {
   opacity: 0.5;
 }
 .team-logo-container{
-
 background: rgb(255,255,255);
 background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%);
   flex-basis: 20%;

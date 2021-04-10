@@ -35,15 +35,7 @@ orderBy,setOrderBy,
   ] = useContext(CategoryContext);
   let Background = ``;
 
-const mystyle = {
-backgroundImage: `url(${Background})`,
-height: "100%",
-width: "100%",
-backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 80,
-    };
+
 
 
 function getPersoID(firstName, lastName, fullName) {

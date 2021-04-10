@@ -28,10 +28,7 @@ useEffect(() => {
   console.log(orderBy,'this is the total!!');
 }, []);
 
-  function handleClick(e) {
-    e.preventDefault();
 
-  }
   function handleChange(e) {
     e.preventDefault();
     setCurrentStat(e.target.value)

@@ -24,9 +24,10 @@ function StatChanger() {
 
 useEffect(() => {
 
-
-  console.log(orderBy,'this is the total!!');
-}, []);
+  return function cleanup() {
+        setOrderBy('total')
+      };
+}, [currentStat]);
 
 
   function handleChange(e) {

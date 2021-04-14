@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -80,6 +81,7 @@ console.log(teamName)
   return (
 
 
+    <Fade top>
     <div className="item-container">
       <div className="headshot-container">
         <span className="item-rank">
@@ -114,13 +116,9 @@ console.log(teamName)
           src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
         />
       </div>
-
     </div>
+  </Fade>
   );
 }
 
-{ /* <img
-      className="team-logo"
-      src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
-    />*/}
 export default Item;

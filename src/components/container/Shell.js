@@ -9,6 +9,7 @@ import Steals from '../stats/Steals';
 import Threes from '../stats/Threes';
 import Fouls from '../stats/Fouls';
 import Turnovers from '../stats/Turnovers';
+import Onboard from '../service/Onboard';
 import { CategoryContext } from "../../context/categoryContext";
 
 
@@ -50,6 +51,7 @@ const [totalTurnovers,avgTurnovers] = turnovers;
   return <div className="main_container">
 
        <StatChanger />
+         {currentStat === null &&  <Onboard  /> }
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
         {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} totalRebs={totalRebs} /> }

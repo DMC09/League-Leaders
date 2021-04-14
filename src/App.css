@@ -14,6 +14,9 @@ html {
   background: #ccc;
   height: 100vh;
 }
+.Onboard-container{
+  border: 2px solid red;
+}
 /* STAT CHANGER AKA TOP PORTION */
 .stat_changer-container {
   height: 25vh;

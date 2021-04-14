@@ -39,10 +39,10 @@ useEffect(() => {
       src={Logo}
     />
   <select disabled={data.length !== 0 ? false : true} className="drowndown" onChange={handleChange}>
-          <option className="drowndown" >
+          <option disabled={data.length !== 0 ? true : false} className="drowndown" >
             {data.length !== 0 ? "Select Stat":"Loading...."}
           </option>
-          <option className="drowndown-option" value="minutes">
+          <option  className="drowndown-option" value="minutes">
             Minutes
           </option>
           <option className="drowndown-option" value="points">

@@ -59,6 +59,7 @@ function getPersoID(firstName, lastName, fullName) {
     if (fullName === "Otto Porter Jr.") setpId(203490);
     if (fullName === "Dennis Smith Jr.") setpId(1628372);
     if (fullName === "Gary Trent Jr.") setpId(1629018);
+    if (fullName === "Robert Williams III") setpId(1629057);
 
     headshotData.filter((item) => {
       if (item.firstName == firstName && item.lastName == lastName)

@@ -16,7 +16,7 @@ html {
 }
 /* Onbarding styling */
 .Onboard-container{
-  border: 2px solid red;
+
   height: 50%;
   display: flex;
   flex-flow: column;

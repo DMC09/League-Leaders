@@ -4,7 +4,6 @@ import Logo from '../../Logo.png';
 
 
 function StatChanger() {
-
   const[data, setData,
   headshotData,setheadshotData,
   minutes, setMinutes,
@@ -23,12 +22,10 @@ function StatChanger() {
 
 
 useEffect(() => {
-
   return function cleanup() {
         setOrderBy('total')
       };
 }, [currentStat]);
-
 
   function handleChange(e) {
     e.preventDefault();
@@ -41,7 +38,7 @@ useEffect(() => {
       className="logo"
       src={Logo}
     />
-    <select className="drowndown" onChange={handleChange}>
+  <select disabled={data.length !== 0 ? false : true} className="drowndown" onChange={handleChange}>
           <option className="drowndown" >
             {data.length !== 0 ? "Select Stat":"Loading...."}
           </option>

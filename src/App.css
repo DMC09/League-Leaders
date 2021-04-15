@@ -77,11 +77,11 @@ img.team-logo {
   padding: 0.25rem 1rem;
   border-radius: 10px;
   border: 1px solid black;
-  -webkit-box-shadow: 0 10px 6px -6px #000;
-  -moz-box-shadow: 0 10px 6px -6px #000;
-  box-shadow: 0 10px 6px -6px #000;
   transition: all .3s ease-in-out .2s;
   font-size: 1.25rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+
 }
 
 .stat_changer-container button:hover{
@@ -92,7 +92,6 @@ img.team-logo {
 
 .stat_changer-container button[disabled] {
     background:#c9082a;
-    transform: scale(1.1);
     cursor: default;
 }
 /* main items  */

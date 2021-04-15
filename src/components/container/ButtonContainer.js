@@ -15,9 +15,12 @@ blocks,setBlocks,
 threes,setThrees,
 fouls,setFouls,
 turnovers,setTurnovers,
-techfoulouts,setTechFoulOuts,
+techfoul,setTechFoul,
+foulouts,setFoulOuts,
 currentStat,setCurrentStat,
 orderBy,setOrderBy] = useContext(CategoryContext);
+
+
   return <div className="button-container">
     <button
       disabled={orderBy==="total"}

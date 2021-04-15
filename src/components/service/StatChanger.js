@@ -16,7 +16,8 @@ function StatChanger() {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoulouts,setTechFoulOuts,
+  techfoul,setTechFoul,
+  foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
 ] = useContext(CategoryContext)
@@ -67,7 +68,7 @@ useEffect(() => {
           <option className="drowndown-option" value="fouls">
             Fouls
           </option>
-      {  /*<option className="drowndown-option" value="turnovers">
+        <option className="drowndown-option" value="turnovers">
           Turnovers
         </option>
         <option className="drowndown-option" value="technicals">
@@ -75,7 +76,7 @@ useEffect(() => {
         </option>
         <option className="drowndown-option" value="foul outs">
           Foul Outs
-        </option> */}
+        </option>
         </select>
 
     {currentStat === null  &&  <div className="button-container"></div>}

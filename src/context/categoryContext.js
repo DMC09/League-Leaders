@@ -14,9 +14,9 @@ const [blocks,setBlocks] = useState([]);
 const [threes,setThrees] = useState([]);
 const [fouls,setFouls] = useState([]);
 const [turnovers,setTurnovers] = useState([]);
-const [techfoulouts,setTechFoulOuts] = useState([]);
+const [techfoul,setTechFoul] = useState([]);
+const [foulouts,setFoulOuts] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
-
 const [orderBy,setOrderBy] = useState('total');
 
 
@@ -33,7 +33,8 @@ const [orderBy,setOrderBy] = useState('total');
       threes,setThrees,
       fouls,setFouls,
       turnovers,setTurnovers,
-      techfoulouts,setTechFoulOuts,
+      techfoul,setTechFoul,
+      foulouts,setFoulOuts,
       currentStat,setCurrentStat,
       orderBy,setOrderBy
       ]}>

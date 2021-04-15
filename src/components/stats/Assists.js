@@ -17,7 +17,8 @@ function Assists({totalAsts,avgAsts}) {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoulouts,setTechFoulOuts,
+  techfoul,setTechFoul,
+  foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)

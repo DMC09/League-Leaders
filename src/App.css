@@ -82,7 +82,8 @@ img.team-logo {
   border: 1px solid black;
   transition: all .3s ease-in-out .2s;
   font-size: 1.25rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
 
 }
@@ -95,6 +96,7 @@ img.team-logo {
 
 .stat_changer-container button[disabled] {
     background:#c9082a;
+    transform: scale(1.0);
     cursor: default;
 }
 /* main items  */

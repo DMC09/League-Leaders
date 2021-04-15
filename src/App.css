@@ -25,9 +25,11 @@ html {
 font-size: 2rem;
 margin-bottom: 1.5rem;
 font-weight: bold;
+font-family: 'Teko', sans-serif;
 }
 .Onboard-container p {
 font-size: 1rem;
+font-family: 'Teko', sans-serif;
 }
 /* STAT CHANGER AKA TOP PORTION */
 .stat_changer-container {

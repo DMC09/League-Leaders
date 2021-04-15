@@ -10,7 +10,7 @@ function Onboard()  {
           </h1>
         <p>
             <Fade bottom>
-              Select a Stat above to check who are the top 10 leaders for their respective stats.
+              Select a stat see who are the top 10 leaders for their respective stat
             </Fade>
           </p>
 

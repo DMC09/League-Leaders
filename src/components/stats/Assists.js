@@ -28,7 +28,7 @@ function Assists({totalAsts,avgAsts}) {
   if(orderBy === 'total') { viewingStat= totalAsts};
   if(orderBy === 'average') { viewingStat= avgAsts};
 
-  let TopTenList= viewingStat.ranks.slice(0,10);
+  let TopTenList= viewingStat.ranks.slice(0,20);
   let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 

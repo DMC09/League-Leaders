@@ -22,7 +22,8 @@ blocks,setBlocks,
 threes,setThrees,
 fouls,setFouls,
 turnovers,setTurnovers,
-techfoulouts,setTechFoulOuts,
+techfoul,setTechFouls,
+foulouts,setFoulOuts,
 currentStat,setCurrentStat,
 orderBy,setOrderBy
 ] = useContext(CategoryContext);
@@ -43,6 +44,8 @@ orderBy,setOrderBy
     const filterForTechFouls = data && data.filter(set=> set.name === 'tech_fouls');
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
 
+    console.log(filterForPersoFouls)
+
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
     setRebounds(filterForRebounds);
@@ -52,7 +55,8 @@ orderBy,setOrderBy
     setThrees([...filterForMadeThress,...filterForThreePCT]);
     setTurnovers(filterForTurnovers);
     setFouls(filterForPersoFouls);
-    setTechFoulOuts([...filterForTechFouls,...filterForFoulOuts])
+    setTechFouls(filterForTechFouls)
+    setFoulOuts(filterForFoulOuts)
   }, [data]);
 
 

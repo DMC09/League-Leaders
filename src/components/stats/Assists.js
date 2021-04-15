@@ -5,7 +5,7 @@ import {v4 as uuidv4 } from 'uuid';
 import Fade from 'react-reveal/Fade';
 
 function Assists({totalAsts,avgAsts}) {
-  const [showLoader,setLoader] = useState(true)
+
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,
@@ -17,7 +17,7 @@ function Assists({totalAsts,avgAsts}) {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoul,setTechFoul,
+  techfoul,setTechFouls,
   foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
@@ -35,16 +35,7 @@ function Assists({totalAsts,avgAsts}) {
 
 
 
-// template but change to items.
-  useEffect(() => {
-    console.log(showLoader);
-      // use Set Timeout to change show loader to false;
-      setTimeout(() => {
-    console.log('you can see me after 2 seconds')
-    setLoader(false)
-    console.log(showLoader);
-}, 250);
-  }, [showLoader]);
+
  return <div className="stat_container">
 
   <ul className="stat-items">{list}</ul>

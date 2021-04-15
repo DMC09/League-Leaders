@@ -16,7 +16,7 @@ function StatChanger() {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoul,setTechFoul,
+  techfoul,setTechFouls,
   foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
@@ -24,7 +24,13 @@ function StatChanger() {
 
 
 useEffect(() => {
+  //Special case for fouls because only averages available.
+  if (currentStat=="fouls") {
+    setOrderBy('average')
+
+  }
   return function cleanup() {
+
         setOrderBy('total')
       };
 }, [currentStat]);

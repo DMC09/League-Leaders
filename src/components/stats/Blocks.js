@@ -17,7 +17,7 @@ function Blocks({totalBlks,avgBlks}) {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoul,setTechFoul,
+  techfoul,setTechFouls,
   foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
@@ -25,7 +25,7 @@ function Blocks({totalBlks,avgBlks}) {
 
   useEffect(() => {
 
-    console.log(orderBy,'This is the assits componets ');
+  
   }, []);
   let viewingStat;
   if(orderBy === 'total') { viewingStat= totalBlks};

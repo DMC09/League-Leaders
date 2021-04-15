@@ -10,12 +10,12 @@ import Threes from '../stats/Threes';
 import Fouls from '../stats/Fouls';
 import Turnovers from '../stats/Turnovers';
 import Onboard from '../service/Onboard';
+import Technicals from '../stats/Technicals';
+import FoulOuts from '../stats/FoulOuts';
 import { CategoryContext } from "../../context/categoryContext";
 
 
 function Shell(props) {
-
-
 
   const [data, setData,
     headshotData,setheadshotData,
@@ -28,7 +28,7 @@ blocks,setBlocks,
 threes,setThrees,
 fouls,setFouls,
 turnovers,setTurnovers,
-techfoul,setTechFoul,
+techfoul,setTechFouls,
 foulouts,setFoulOuts,
 currentStat,setCurrentStat,
 orderBy,setOrderBy] = useContext(CategoryContext);
@@ -40,12 +40,14 @@ const [totalAsts,avgAsts] = assists;
 const [totalStls,avgStls] = steals;
 const [totalBlks,avgBlks] = blocks;
 const [totalTreys,avgTreys,pctTrys] = threes;
-const [totalFouls,avgFouls] = fouls;
+const [,avgFouls] = fouls;
 const [totalTurnovers,avgTurnovers] = turnovers;
+const [totalTechnicals,] = techfoul;
+const [totalFoulOuts,] = foulouts;
 
 
   useEffect(() => {
-
+console.log(totalTechnicals,totalFoulOuts,'teste!');
   }, []);
 
 
@@ -60,8 +62,9 @@ const [totalTurnovers,avgTurnovers] = turnovers;
         {currentStat === 'steals' && <Steals totalStls={totalStls} avgStls={avgStls} /> }
         {currentStat === 'blocks' && <Blocks totalBlks={totalBlks} avgBlks={avgBlks}/> }
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
-        {currentStat === 'fouls' && <Fouls totalFouls={totalFouls} avgFouls={avgFouls}  /> }
+        {currentStat === 'fouls' && <Fouls  avgFouls={avgFouls}  /> }
         {currentStat === 'turnovers' && <Turnovers totalTurnovers={totalTurnovers} avgTurnovers={avgTurnovers}  /> }
+
 
   </div>;
 }

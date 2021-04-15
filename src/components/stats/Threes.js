@@ -17,7 +17,7 @@ function Threes({totalTreys,avgTreys,pctTrys}) {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoul,setTechFoul,
+  techfoul,setTechFouls,
   foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
@@ -41,12 +41,6 @@ function Threes({totalTreys,avgTreys,pctTrys}) {
 
 
   return <div className="stat_container">
-
-
-
-
-
-
    <ul className="stat-items">{list}</ul>
        </div>;
 }

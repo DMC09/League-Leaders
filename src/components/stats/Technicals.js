@@ -3,9 +3,7 @@ import { CategoryContext } from "../../context/categoryContext";
 import Item from '../service/Item';
 import {v4 as uuidv4 } from 'uuid';
 
-
-
-function Rebounds({totalRebs,avgRebs}) {
+function Technicals({totalTurnovers,avgTurnovers}) {
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,
@@ -22,22 +20,25 @@ function Rebounds({totalRebs,avgRebs}) {
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
   ] = useContext(CategoryContext)
-    let viewingStat= totalRebs;
-    if(orderBy === 'total') { viewingStat= totalRebs};
-    if(orderBy === 'average') { viewingStat= avgRebs};
-    let TopTwentyList= viewingStat.ranks.slice(0,20);
-    let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+
+  let viewingStat = totalTurnovers;
+  if(orderBy === 'average') { viewingStat= avgTurnovers};
+  if(orderBy === 'total') { viewingStat= totalTurnovers};
+  let TopTwentyList= viewingStat.ranks.slice(0,20);
+  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+
+
+
 
 
   useEffect(() => {
 
   }, []);
+ return <div className="stat_container">
 
-  return <div className="stat_container">
-
-<ul className="stat-items">{list}</ul>
-    </div>;
+  <ul className="stat-items">{list}</ul>
+      </div>;
 }
 
 
-export default Rebounds;
+export default Technicals;

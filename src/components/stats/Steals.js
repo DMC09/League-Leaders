@@ -16,7 +16,7 @@ function Steals({totalStls,avgStls}) {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoul,setTechFoul,
+  techfoul,setTechFouls,
   foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,

@@ -17,7 +17,7 @@ function Minutes({totalMins,avgMins}) {
   threes,setThrees,
   fouls,setFouls,
   turnovers,setTurnovers,
-  techfoul,setTechFoul,
+  techfoul,setTechFouls,
   foulouts,setFoulOuts,
   currentStat,setCurrentStat,
   orderBy,setOrderBy,
@@ -31,7 +31,7 @@ function Minutes({totalMins,avgMins}) {
 
 
 useEffect(() => {
-console.log(totalMins,'players total minutes data')
+
 
 }, []);
 

@@ -29,19 +29,18 @@ function Item({ info, index }) {
     setThrees,
     fouls,setFouls,
     turnovers,setTurnovers,
-    techfoul,setTechFoul,
+    techfoul,setTechFouls,
     foulouts,setFoulOuts,
     currentStat,
     setCurrentStat,
 orderBy,setOrderBy,
   ] = useContext(CategoryContext);
-  let Background = ``;
+  
 
 
 
 
 function getPersoID(firstName, lastName, fullName) {
-  console.log(fullName);
   // Junior/Seniors special logic
     if (fullName === "Marcus Morris Sr.") setpId(202694);
     if (fullName === "Troy Brown Jr.") setpId(1628972);
@@ -68,7 +67,7 @@ function getPersoID(firstName, lastName, fullName) {
     });
   }
 function getTeamLogo(teamName){
-console.log(teamName)
+
   setTeamlogoname(teamName.split(" ").join(""))
 }
   useEffect(() => {

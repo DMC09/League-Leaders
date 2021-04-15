@@ -80,7 +80,7 @@ useEffect(() => {
         <option className="drowndown-option" value="technicals">
           Technicals
         </option>
-        <option className="drowndown-option" value="foul outs">
+        <option className="drowndown-option" value="foul_outs">
           Foul Outs
         </option>
         </select>

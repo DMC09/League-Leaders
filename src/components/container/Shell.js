@@ -9,9 +9,9 @@ import Steals from '../stats/Steals';
 import Threes from '../stats/Threes';
 import Fouls from '../stats/Fouls';
 import Turnovers from '../stats/Turnovers';
-import Onboard from '../service/Onboard';
 import Technicals from '../stats/Technicals';
 import FoulOuts from '../stats/FoulOuts';
+import Onboard from '../service/Onboard';
 import { CategoryContext } from "../../context/categoryContext";
 
 
@@ -45,9 +45,7 @@ const [totalTurnovers,avgTurnovers] = turnovers;
 const [totalTechnicals,] = techfoul;
 const [totalFoulOuts,] = foulouts;
 
-
   useEffect(() => {
-console.log(totalTechnicals,totalFoulOuts,'teste!');
   }, []);
 
 
@@ -64,6 +62,8 @@ console.log(totalTechnicals,totalFoulOuts,'teste!');
         {currentStat === 'threes' && <Threes totalTreys={totalTreys} avgTreys={avgTreys}  pctTrys={pctTrys} /> }
         {currentStat === 'fouls' && <Fouls  avgFouls={avgFouls}  /> }
         {currentStat === 'turnovers' && <Turnovers totalTurnovers={totalTurnovers} avgTurnovers={avgTurnovers}  /> }
+        {currentStat === 'technicals' && <Technicals totalTechnicals={totalTechnicals} /> }
+        {currentStat === 'foul_outs' && <FoulOuts totalFoulOuts={totalFoulOuts} /> }
 
 
   </div>;

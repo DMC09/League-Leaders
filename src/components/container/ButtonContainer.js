@@ -44,11 +44,11 @@ orderBy,setOrderBy] = useContext(CategoryContext);
               disabled={orderBy==="average"}
               onClick={()=>setOrderBy('average')}>Averages</button> </>: console.log('it doesnt contain block')
             }
-
-            {currentStat == 'threes' &&  <button disabled={orderBy==="percentage"} onClick={()=>setOrderBy('percentage')}>Percentages</button>}
-            
-          {currentStat == 'fouls' &&  <button disabled={orderBy==="average"} onClick={()=>setOrderBy('percentage')}>Averages</button>
-          }
+          {/* Special Cases for singuluar Stats*/}
+          {currentStat == 'threes' &&  <button disabled={orderBy==="percentage"} onClick={()=>setOrderBy('percentage')}>Percentages</button>}
+          {currentStat == 'fouls' &&  <button disabled={orderBy==="average"}>Averages</button>}
+          {currentStat == 'foul_outs' &&  <button disabled={orderBy==="total"}>Totals</button>}
+          {currentStat == 'technicals' &&  <button disabled={orderBy==="total"}>Totals</button>}
   </div>
 }
 

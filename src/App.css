@@ -24,6 +24,7 @@ html {
 }
 .Onboard-container h1 {
 font-size: 2rem;
+margin-bottom: 1.5rem;
 }
 .Onboard-container p {
 font-size: 1rem;
@@ -254,16 +255,19 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(204,204,204,1) 
     background: #ccc;
     width: 75%;
     max-width: 800px;
+border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 
   }
   .stat_changer-container {
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-top: 0rem;
     height: 200px;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
 
   select.dropdown {

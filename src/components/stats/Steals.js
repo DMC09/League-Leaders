@@ -24,8 +24,8 @@ function Steals({totalStls,avgStls}) {
   let viewingStat =totalStls;
   if(orderBy === 'total') { viewingStat= totalStls};
   if(orderBy === 'average') { viewingStat= avgStls};
-  let TopTenList= viewingStat.ranks.slice(0,10);
-  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+  let TopTwentyList= viewingStat.ranks.slice(0,20);
+  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
   useEffect(() => {

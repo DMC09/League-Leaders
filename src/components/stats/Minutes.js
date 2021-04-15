@@ -25,8 +25,8 @@ function Minutes({totalMins,avgMins}) {
   let viewingStat=totalMins;
   if(orderBy === 'total') { viewingStat= totalMins};
   if(orderBy === 'average') { viewingStat= avgMins};
-  let TopTenList= viewingStat.ranks.slice(0,10);
-  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+  let TopTwentyList= viewingStat.ranks.slice(0,20);
+  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
 useEffect(() => {

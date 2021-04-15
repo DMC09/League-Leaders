@@ -27,8 +27,8 @@ function Threes({totalTreys,avgTreys,pctTrys}) {
   if(orderBy === 'average') { viewingStat= avgTreys};
   if(orderBy === 'percentage') { viewingStat= pctTrys};
 
-  let TopTenList= viewingStat.ranks.slice(0,10);
-  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+  let TopTwentyList= viewingStat.ranks.slice(0,20);
+  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
   useEffect(() => {
     console.log(totalTreys,avgTreys,pctTrys, 'are the stats here??');

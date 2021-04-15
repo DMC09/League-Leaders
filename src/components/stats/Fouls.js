@@ -22,8 +22,8 @@ function Fouls({totalFouls,avgFouls}) {
   let viewingStat = totalFouls;
   if(orderBy === 'total') { viewingStat= totalFouls};
   if(orderBy === 'average') { viewingStat= avgFouls};
-  let TopTenList= viewingStat.ranks.slice(0,10);
-  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+  let TopTwentyList= viewingStat.ranks.slice(0,20);
+  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
 

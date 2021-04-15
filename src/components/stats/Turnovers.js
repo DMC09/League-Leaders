@@ -24,8 +24,8 @@ function Turnovers({totalTurnovers,avgTurnovers}) {
 
   if(orderBy === 'total') { viewingStat= totalTurnovers};
   if(orderBy === 'average') { viewingStat= avgTurnovers};
-  let TopTenList= viewingStat.ranks.slice(0,10);
-  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+  let TopTwentyList= viewingStat.ranks.slice(0,20);
+  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
 

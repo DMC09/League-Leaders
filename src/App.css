@@ -38,13 +38,14 @@ font-size: 1rem;
   background: #17408b;
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 }
 /* STAT AKA ACTUAL STATS PORTION */
 
 select {
-font-size: 1.5rem;
+font-size: 1.25rem;
+margin-bottom: 1rem;
 
 }
 
@@ -78,6 +79,7 @@ img.team-logo {
   -moz-box-shadow: 0 10px 6px -6px #000;
   box-shadow: 0 10px 6px -6px #000;
   transition: all .3s ease-in-out .2s;
+  font-size: 1.25rem;
 }
 
 .stat_changer-container button:hover{

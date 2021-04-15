@@ -23,8 +23,8 @@ function Technicals({totalTechnicals}) {
 
   let viewingStat = totalTechnicals;
   if(orderBy === 'total') { viewingStat= totalTechnicals};
-  let TopTwentyList= viewingStat.ranks.slice(0,20);
-  let list = TopTwentyList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
+  let TopTenList= viewingStat.ranks.slice(0,10);
+  let list = TopTenList.map((item,index)=> <Item key={uuidv4()} index={index} info={item}/>)
 
 
 

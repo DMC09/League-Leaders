@@ -35,7 +35,7 @@ function Item({ info, index }) {
     setCurrentStat,
 orderBy,setOrderBy,
   ] = useContext(CategoryContext);
-  
+
 
 
 
@@ -104,7 +104,7 @@ function getTeamLogo(teamName){
           <span className="item-score">
             {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}{" "}
             {orderBy === "percentage" && "of "}
-            {currentStat}
+            {currentStat == "foul_outs" ? 'times fouled out': currentStat}
             {" "}
             {orderBy === "total" && ""}
             {orderBy === "average" && " per game"}

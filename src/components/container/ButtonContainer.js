@@ -34,18 +34,18 @@ orderBy,setOrderBy] = useContext(CategoryContext);
 
 
   return <div className="button-container">
-
+{currentStat == 'threes' &&  <button disabled={orderBy==="percentage"} onClick={()=>setOrderBy('percentage')}>Percentages</button>}
           {mainStats.includes(currentStat) &&
             <>
             <button
-              disabled={orderBy==="total"}
-              onClick={()=>setOrderBy('total')}>Total</button>
-            <button
               disabled={orderBy==="average"}
               onClick={()=>setOrderBy('average')}>Averages</button>
+            <button
+              disabled={orderBy==="total"}
+              onClick={()=>setOrderBy('total')}>Total</button>
             </>}
           {/* Special Cases for singuluar Stats*/}
-          {currentStat == 'threes' &&  <button disabled={orderBy==="percentage"} onClick={()=>setOrderBy('percentage')}>Percentages</button>}
+
           {currentStat == 'fouls' &&  <button disabled={orderBy==="average"}>Averages</button>}
           {currentStat == 'foul_outs' &&  <button disabled={orderBy==="total"}>Totals</button>}
           {currentStat == 'technicals' &&  <button disabled={orderBy==="total"}>Totals</button>}

@@ -102,9 +102,10 @@ function getTeamLogo(teamName){
         <div className="item-NameScore">
           <span className="item-name">{info.player.full_name}</span>
           <span className="item-score">
-            {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}{" "}
+            {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}
+            {currentStat !== "foul_outs" &&" "}
             {orderBy === "percentage" && "of "}
-            {currentStat == "foul_outs" ? 'times fouled out': currentStat}
+            {currentStat == "foul_outs" ? 'x fouled out': currentStat}
             {" "}
             {orderBy === "total" && ""}
             {orderBy === "average" && " per game"}

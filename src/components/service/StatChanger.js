@@ -71,17 +71,17 @@ useEffect(() => {
           <option className="drowndown-option" value="threes">
             Threes
           </option>
+          <option className="drowndown-option" value="turnovers">
+            Turnovers
+          </option>
           <option className="drowndown-option" value="fouls">
             Fouls
           </option>
-        <option className="drowndown-option" value="turnovers">
-          Turnovers
-        </option>
+          <option className="drowndown-option" value="foul_outs">
+            Fouled Out
+          </option>
         <option className="drowndown-option" value="technicals">
           Technicals
-        </option>
-        <option className="drowndown-option" value="foul_outs">
-          Foul Outs
         </option>
         </select>
 

@@ -84,7 +84,7 @@ function getTeamLogo(teamName){
   return (
 
 
-    <Fade top>
+    <Fade >
     <div className="item-container">
       <div className="headshot-container">
         <span className="item-rank">
@@ -115,7 +115,7 @@ function getTeamLogo(teamName){
         </div>
       </div>
       <div className="team-logo-container">
-  
+
         <img
           className="team-logo"
           src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}

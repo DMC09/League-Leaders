@@ -44,7 +44,7 @@ orderBy,setOrderBy
     const filterForTechFouls = data && data.filter(set=> set.name === 'tech_fouls');
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
 
-    console.log(filterForPersoFouls)
+
 
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
@@ -63,7 +63,6 @@ orderBy,setOrderBy
   useEffect(() => {
     getHeadshotData();
     getData();
-
     console.log('getting the data ');
   }, []);
 

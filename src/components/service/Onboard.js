@@ -10,7 +10,7 @@ function Onboard()  {
           </h1>
         <p>
             <Fade bottom>
-              Select a stat see who leading the league!
+              Select a stat to see who is leading the league!
             </Fade>
           </p>
 

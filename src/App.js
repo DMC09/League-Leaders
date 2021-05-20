@@ -7,6 +7,7 @@ import axios from "axios";
 //API Links
 const regularSznAPI = `https://league-leaders-api.herokuapp.com/regular`;
 const headShotAPI = `https://league-leaders-api.herokuapp.com/headshot`;
+const playoffsAPI = `https://league-leaders-api.herokuapp.com/playoffs`;
 
 
 // COMPONENT
@@ -75,6 +76,14 @@ orderBy,setOrderBy
       console.error(error);
     }
   }
+  // async function getPlyoffsData() {
+  //   try {
+  //     const response = await axios.get(regularSznAPI);
+  //     await setData(response.data.data.categories);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
   async function getHeadshotData() {
     try {
       const response = await axios.get(headShotAPI);

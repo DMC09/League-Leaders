@@ -46,7 +46,6 @@ orderBy,setOrderBy
     const filterForFoulOuts = data && data.filter(set=> set.name === 'foulouts');
 
 
-
     setMinutes(filterForMinutes);
     setPoints(filterForPoints);
     setRebounds(filterForRebounds);

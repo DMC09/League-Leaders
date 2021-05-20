@@ -5,7 +5,7 @@ import Shell from './components/container/Shell';
 import { CategoryContext } from "./context/categoryContext";
 import axios from "axios";
 //API Links
-const backEndAPI = `https://league-leaders-api.herokuapp.com`;
+const regularSznAPI = `https://league-leaders-api.herokuapp.com/regular`;
 const headShotAPI = `https://league-leaders-api.herokuapp.com/headshot`;
 
 
@@ -62,14 +62,14 @@ orderBy,setOrderBy
 
   useEffect(() => {
     getHeadshotData();
-    getData();
+    getRegularSznData();
     console.log('getting the data ');
   }, []);
 
 
-  async function getData() {
+  async function getRegularSznData() {
     try {
-      const response = await axios.get(backEndAPI);
+      const response = await axios.get(regularSznAPI);
       await setData(response.data.data.categories);
     } catch (error) {
       console.error(error);

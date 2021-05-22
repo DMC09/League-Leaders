@@ -39,7 +39,7 @@ font-family: 'Teko', sans-serif;
   border-bottom: 2px solid black;
   background: #17408b;
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: flex-start;
   align-items: center;
 }

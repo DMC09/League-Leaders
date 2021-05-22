@@ -75,7 +75,7 @@ orderBy,setOrderBy
       console.error(error);
     }
   }
-  // async function getPlyoffsData() {
+  // async function getPlayoffsData() {
   //   try {
   //     const response = await axios.get(regularSznAPI);
   //     await setData(response.data.data.categories);

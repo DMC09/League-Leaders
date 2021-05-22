@@ -46,6 +46,10 @@ useEffect(() => {
       className="logo"
       src={Logo}
     />
+  <div className="stat_order_container">
+
+
+
   <select disabled={data.length !== 0 ? false : true} className="drowndown" onChange={handleChange}>
           <option disabled={data.length !== 0 ? true : false} className="drowndown" >
             {data.length !== 0 ? "Select Stat":"Loading...."}
@@ -88,6 +92,7 @@ useEffect(() => {
     {currentStat === null  &&  <div className="button-container"></div>}
 
       {currentStat !== null  && <ButtonContainer/> }
+        </div>
   </div>
   ;
 }

@@ -81,7 +81,7 @@ setSeasonType('post')
 <p>{date.toLocaleDateString()}</p>
         <label>
           <Toggle
-            defaultChecked={true}
+            defaultChecked={false}
             icons={false}
             checked={seasonType === 'regular' ? true : false}
             onChange={enableRegularSeason} />
@@ -95,11 +95,10 @@ setSeasonType('post')
     onChange={enablePostSeason} />
   <span>Post Season</span>
 </label>
-
       </div>
       <div className="stat_order_container">
         <select
-          disabled={data.length !== 0 ? false : true}
+          disabled={seasonType === null && true}
           className="drowndown"
           onChange={handleChange}
         >

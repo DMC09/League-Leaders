@@ -89,9 +89,8 @@ useEffect(() => {
         </option>
         </select>
 
-    {currentStat === null  &&  <div className="button-container"></div>}
 
-      {currentStat !== null  && <ButtonContainer/> }
+      {currentStat !== null ? <ButtonContainer/> : <div className="button-container"></div>}
         </div>
   </div>
   ;

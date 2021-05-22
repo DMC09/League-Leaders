@@ -1,60 +1,115 @@
-import React,{useEffect,useContext,useState} from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
-import Logo from '../../Logo.png';
-import ButtonContainer from '../container/ButtonContainer';
+import Logo from "../../Logo.png";
+import ButtonContainer from "../container/ButtonContainer";
+import Toggle from 'react-toggle';
+import "../../react-switch.css";
 
 
 function StatChanger() {
-  const[data, setData,
-  headshotData,setheadshotData,
-  minutes, setMinutes,
-  points,setPoints,
-  rebounds,setRebounds,
-  assists,setAssists,
-  steals,setSteals,
-  blocks,setBlocks,
-  threes,setThrees,
-  fouls,setFouls,
-  turnovers,setTurnovers,
-  techfoul,setTechFouls,
-  foulouts,setFoulOuts,
-  currentStat,setCurrentStat,
-  orderBy,setOrderBy,
-] = useContext(CategoryContext)
+  const [isToggled, setToggle] = useState(false)
+  const [
+    data,
+    setData,
+    headshotData,
+    setheadshotData,
+    minutes,
+    setMinutes,
+    points,
+    setPoints,
+    rebounds,
+    setRebounds,
+    assists,
+    setAssists,
+    steals,
+    setSteals,
+    blocks,
+    setBlocks,
+    threes,
+    setThrees,
+    fouls,
+    setFouls,
+    turnovers,
+    setTurnovers,
+    techfoul,
+    setTechFouls,
+    foulouts,
+    setFoulOuts,
+    currentStat,
+    setCurrentStat,
+    orderBy,
+    setOrderBy,
+    seasonType,setSeasonType
+  ] = useContext(CategoryContext);
+  const date = new Date();
 
 
-useEffect(() => {
-  //Special case for fouls because only averages available.
-  if (currentStat=="fouls") {
-    setOrderBy('average')
+  useEffect(() => {
+    //Special case for fouls because only averages available.
+    if (currentStat == "fouls") {
+      setOrderBy("average");
+    }
+    return function cleanup() {
+      setOrderBy("total");
+    };
+  }, [currentStat]);
 
-  }
-  return function cleanup() {
+  useEffect(() => {
+    //Logic to see if the regular season or the post season it selected.
 
-        setOrderBy('total')
-      };
-}, [currentStat]);
+  }, [isToggled]);
 
   function handleChange(e) {
     e.preventDefault();
-    setCurrentStat(e.target.value)
+    setCurrentStat(e.target.value);
   }
 
-  return <div className="stat_changer-container">
+  function enableRegularSeason(){
+setToggle(!isToggled)
+setSeasonType('regular')
+  }
+  function enablePostSeason(){
+setToggle(!isToggled)
+setSeasonType('post')
 
-    <img
-      className="logo"
-      src={Logo}
-    />
-  <div className="stat_order_container">
+  }
 
+  return (
+    <div className="stat_changer-container">
+      <img className="logo" src={Logo} />
+      <div className="season_container">
+<p>{date.toLocaleDateString()}</p>
+        <label>
+          <Toggle
+            defaultChecked={true}
+            icons={false}
+            checked={seasonType === 'regular' ? true : false}
+            onChange={enableRegularSeason} />
+          <span>Regular Season</span>
+        </label>
+        <label>
+  <Toggle
+    defaultChecked={false}
+    icons={false}
+    checked={seasonType === 'post' ? true : false}
+    onChange={enablePostSeason} />
+  <span>Post Season</span>
+</label>
 
-
-  <select disabled={data.length !== 0 ? false : true} className="drowndown" onChange={handleChange}>
-          <option disabled={data.length !== 0 ? true : false} className="drowndown" >
-            {data.length !== 0 ? "Select Stat":"Loading...."}
+      </div>
+      <div className="stat_order_container">
+        <select
+          disabled={data.length !== 0 ? false : true}
+          className="drowndown"
+          onChange={handleChange}
+        >
+          <option
+            disabled={data.length !== 0 ? true : false}
+            className="drowndown"
+          >
+            {data.length !== 0 ? "Select Stat" : "Loading...."}
           </option>
-          <option  className="drowndown-option" value="minutes">
+          <option className="drowndown-option" value="minutes">
             Minutes
           </option>
           <option className="drowndown-option" value="points">
@@ -84,17 +139,19 @@ useEffect(() => {
           <option className="drowndown-option" value="foul_outs">
             Fouled Out
           </option>
-        <option className="drowndown-option" value="technicals">
-          Technicals
-        </option>
+          <option className="drowndown-option" value="technicals">
+            Technicals
+          </option>
         </select>
 
-
-      {currentStat !== null ? <ButtonContainer/> : <div className="button-container"></div>}
-        </div>
-  </div>
-  ;
+        {currentStat !== null ? (
+          <ButtonContainer />
+        ) : (
+          <div className="button-container"></div>
+        )}
+      </div>
+    </div>
+  );
 }
-
 
 export default StatChanger;

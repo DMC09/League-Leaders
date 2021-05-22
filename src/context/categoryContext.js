@@ -18,6 +18,7 @@ const [techfoul,setTechFouls] = useState([]);
 const [foulouts,setFoulOuts] = useState([]);
 const [currentStat,setCurrentStat] = useState(null);
 const [orderBy,setOrderBy] = useState('total');
+const [seasonType,setSeasonType] = useState(null);
 
 
   return (
@@ -36,7 +37,8 @@ const [orderBy,setOrderBy] = useState('total');
       techfoul,setTechFouls,
       foulouts,setFoulOuts,
       currentStat,setCurrentStat,
-      orderBy,setOrderBy
+      orderBy,setOrderBy,
+      seasonType,setSeasonType
       ]}>
       {props.children}
     </CategoryContext.Provider>

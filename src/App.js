@@ -26,7 +26,8 @@ turnovers,setTurnovers,
 techfoul,setTechFouls,
 foulouts,setFoulOuts,
 currentStat,setCurrentStat,
-orderBy,setOrderBy
+orderBy,setOrderBy,
+seasonType,setSeasonType
 ] = useContext(CategoryContext);
 
 
@@ -66,6 +67,19 @@ orderBy,setOrderBy
     console.log('getting the data ');
   }, []);
 
+  useEffect(() => {
+    if(seasonType === 'regular') {
+        // getRegularSznData();
+        console.log('the regular season is selected')
+
+    }
+
+    if( seasonType === 'post') {
+      // getPlayoffsData();
+      console.log('the post season is selected')
+    }
+  }, [seasonType]);
+
 
   async function getRegularSznData() {
     try {
@@ -77,12 +91,14 @@ orderBy,setOrderBy
   }
   // async function getPlayoffsData() {
   //   try {
-  //     const response = await axios.get(regularSznAPI);
+  //     const response = await axios.get(playoffsAPI);
   //     await setData(response.data.data.categories);
   //   } catch (error) {
   //     console.error(error);
   //   }
   // }
+
+
   async function getHeadshotData() {
     try {
       const response = await axios.get(headShotAPI);

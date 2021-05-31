@@ -10,7 +10,7 @@ function Onboard()  {
           </h1>
         <p>
             <Fade bottom>
-              Select a stat to see who is leading the league!
+              Select the season type you want, and then the stat you want to see.
             </Fade>
           </p>
 

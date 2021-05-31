@@ -31,7 +31,8 @@ turnovers,setTurnovers,
 techfoul,setTechFouls,
 foulouts,setFoulOuts,
 currentStat,setCurrentStat,
-orderBy,setOrderBy] = useContext(CategoryContext);
+orderBy,setOrderBy,
+seasonType,setSeasonType] = useContext(CategoryContext);
 
 const [totalMins,avgMins] = minutes;
 const [totalPts,avgPts] = points;
@@ -52,7 +53,7 @@ const [totalFoulOuts,] = foulouts;
   return <div className="main_container">
 
        <StatChanger />
-         {currentStat === null &&  <Onboard  /> }
+        {seasonType === null &&  <Onboard  /> }
         {currentStat === 'minutes' &&  <Minutes totalMins={totalMins} avgMins={avgMins} /> }
         {currentStat === 'points' && <Points totalPts={totalPts} avgPts={avgPts} /> }
         {currentStat === 'rebounds' && <Rebounds  avgRebs={avgRebs} totalRebs={totalRebs} /> }

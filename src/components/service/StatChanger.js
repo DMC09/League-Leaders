@@ -2,12 +2,11 @@ import React, { useEffect, useContext, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
 import Logo from "../../Logo.png";
 import ButtonContainer from "../container/ButtonContainer";
-import Toggle from 'react-toggle';
+import Toggle from "react-toggle";
 import "../../react-switch.css";
 
-
 function StatChanger() {
-  const [isToggled, setToggle] = useState(false)
+  const [isToggled, setToggle] = useState(false);
   const [
     data,
     setData,
@@ -39,10 +38,10 @@ function StatChanger() {
     setCurrentStat,
     orderBy,
     setOrderBy,
-    seasonType,setSeasonType
+    seasonType,
+    setSeasonType,
   ] = useContext(CategoryContext);
   const date = new Date();
-
 
   useEffect(() => {
     //Special case for fouls because only averages available.
@@ -54,47 +53,43 @@ function StatChanger() {
     };
   }, [currentStat]);
 
-  useEffect(() => {
-    //Logic to see if the regular season or the post season it selected.
-
-  }, [isToggled]);
-
   function handleChange(e) {
     e.preventDefault();
     setCurrentStat(e.target.value);
   }
 
-  function enableRegularSeason(){
-setToggle(!isToggled)
-setSeasonType('regular')
+  function enableRegularSeason() {
+    setToggle(!isToggled);
+    setSeasonType("regular");
   }
-  function enablePostSeason(){
-setToggle(!isToggled)
-setSeasonType('post')
-
+  function enablePostSeason() {
+    setToggle(!isToggled);
+    setSeasonType("post");
   }
 
   return (
     <div className="stat_changer-container">
       <img className="logo" src={Logo} />
       <div className="season_container">
-<p>{date.toLocaleDateString()}</p>
+        <p>{date.toLocaleDateString()}</p>
         <label>
           <Toggle
             defaultChecked={false}
             icons={false}
-            checked={seasonType === 'regular' ? true : false}
-            onChange={enableRegularSeason} />
+            checked={seasonType === "regular" ? true : false}
+            onChange={enableRegularSeason}
+          />
           <span>Regular Season</span>
         </label>
         <label>
-  <Toggle
-    defaultChecked={false}
-    icons={false}
-    checked={seasonType === 'post' ? true : false}
-    onChange={enablePostSeason} />
-  <span>Post Season</span>
-</label>
+          <Toggle
+            defaultChecked={false}
+            icons={false}
+            checked={seasonType === "post" ? true : false}
+            onChange={enablePostSeason}
+          />
+          <span>Post Season</span>
+        </label>
       </div>
       <div className="stat_order_container">
         <select
@@ -106,7 +101,8 @@ setSeasonType('post')
             disabled={data.length !== 0 ? true : false}
             className="drowndown"
           >
-            {data.length !== 0 ? "Select Stat" : "Loading...."}
+            {seasonType === null &&  "Select Season"}
+            {seasonType  !== null && "Select Stat" }
           </option>
           <option className="drowndown-option" value="minutes">
             Minutes

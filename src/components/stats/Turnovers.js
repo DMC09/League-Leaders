@@ -3,7 +3,7 @@ import { CategoryContext } from "../../context/categoryContext";
 import Item from '../service/Item';
 import {v4 as uuidv4 } from 'uuid';
 
-function Turnovers({totalTurnovers,avgTurnovers}) {
+const  Turnovers = ({totalTurnovers,avgTurnovers})=> {
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,

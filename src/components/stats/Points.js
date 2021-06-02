@@ -5,7 +5,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 
 
-function Points({totalPts,avgPts}) {
+const  Points = ({totalPts,avgPts})=> {
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,

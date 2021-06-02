@@ -1,7 +1,7 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
-function Onboard()  {
+const  Onboard =()=>  {
   return <div className="Onboard-container">
         <h1>
             <Fade top>

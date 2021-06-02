@@ -5,7 +5,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 
 
-function Threes({totalTreys,avgTreys,pctTrys}) {
+const  Threes = ({totalTreys,avgTreys,pctTrys})=> {
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,

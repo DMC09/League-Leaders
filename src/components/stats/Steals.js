@@ -4,7 +4,7 @@ import Item from '../service/Item';
 import {v4 as uuidv4 } from 'uuid';
 
 
-function Steals({totalStls,avgStls}) {
+const  Steals =({totalStls,avgStls}) => {
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,

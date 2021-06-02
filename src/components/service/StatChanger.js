@@ -5,7 +5,7 @@ import ButtonContainer from "../container/ButtonContainer";
 import Toggle from "react-toggle";
 import "../../react-switch.css";
 
-function StatChanger() {
+const  StatChanger =()=> {
   const [isToggled, setToggle] = useState(false);
   const [
     data,

@@ -3,7 +3,7 @@ import { CategoryContext } from "../../context/categoryContext";
 import Item from '../service/Item';
 import {v4 as uuidv4 } from 'uuid';
 
-function FoulOuts({totalFoulOuts}) {
+const FoulOuts = ({totalFoulOuts})=> {
   console.log(totalFoulOuts)
 
   const[data, setData,

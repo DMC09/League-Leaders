@@ -15,7 +15,7 @@ import Onboard from '../service/Onboard';
 import { CategoryContext } from "../../context/categoryContext";
 
 
-function Shell(props) {
+const Shell = (props) => {
 
   const [data, setData,
     headshotData,setheadshotData,

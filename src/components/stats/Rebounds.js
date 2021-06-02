@@ -5,7 +5,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 
 
-function Rebounds({totalRebs,avgRebs}) {
+const Rebounds = ({totalRebs,avgRebs}) =>{
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,

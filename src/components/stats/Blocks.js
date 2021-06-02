@@ -5,7 +5,7 @@ import {v4 as uuidv4 } from 'uuid';
 
 
 
-function Blocks({totalBlks,avgBlks}) {
+const Blocks =({totalBlks,avgBlks}) => {
   const[data, setData,
     headshotData,setheadshotData,
    minutes, setMinutes,
@@ -25,7 +25,7 @@ function Blocks({totalBlks,avgBlks}) {
 
   useEffect(() => {
 
-  
+
   }, []);
   let viewingStat;
   if(orderBy === 'total') { viewingStat= totalBlks};

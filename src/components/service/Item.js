@@ -1,15 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
-
-
-function Item({ info, index }) {
+const Item = ({ info, index }) => {
   var persoId;
 
   const [pID, setpId] = useState();
   const [teamlogoname, setTeamlogoname] = useState();
-  const [data,
+  const [
+    data,
     setData,
     headshotData,
     setheadshotData,
@@ -27,21 +26,22 @@ function Item({ info, index }) {
     setBlocks,
     threes,
     setThrees,
-    fouls,setFouls,
-    turnovers,setTurnovers,
-    techfoul,setTechFouls,
-    foulouts,setFoulOuts,
+    fouls,
+    setFouls,
+    turnovers,
+    setTurnovers,
+    techfoul,
+    setTechFouls,
+    foulouts,
+    setFoulOuts,
     currentStat,
     setCurrentStat,
-orderBy,setOrderBy,
+    orderBy,
+    setOrderBy,
   ] = useContext(CategoryContext);
 
-
-
-
-
-function getPersoID(firstName, lastName, fullName) {
-  // Junior/Seniors special logic
+  function getPersoID(firstName, lastName, fullName) {
+    // Junior/Seniors special logic
     if (fullName === "Marcus Morris Sr.") setpId(202694);
     if (fullName === "Troy Brown Jr.") setpId(1628972);
     if (fullName === "Vernon Carey Jr.") setpId(1630176);
@@ -66,14 +66,11 @@ function getPersoID(firstName, lastName, fullName) {
         setpId(item.personId);
     });
   }
-function getTeamLogo(teamName){
-
-  setTeamlogoname(teamName.split(" ").join(""))
-}
+  function getTeamLogo(teamName) {
+    setTeamlogoname(teamName.split(" ").join(""));
+  }
   useEffect(() => {
-
-
-    getTeamLogo(info.teams[0].name)
+    getTeamLogo(info.teams[0].name);
     getPersoID(
       info.player.first_name,
       info.player.last_name,
@@ -82,48 +79,48 @@ function getTeamLogo(teamName){
   }, [info]);
 
   return (
-
-
-    <Fade >
-    <div className="item-container">
-      <div className="headshot-container">
-        <span className="item-rank">
-          {info.tied === "false" ? info.rank : index + 1}
-        </span>
-        <div className="item-jersey_position">
-          <span className="item-jersey">{info.player.jersey_number}</span>
-          <hr />
-          <span className="item-position">{info.player.primary_position}</span>
-        </div>
-        <img
-          className="headshot"
-          src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
-        />
-      </div>
-      <div className="item-info">
-        <div className="item-NameScore">
-          <span className="item-name">{info.player.full_name}</span>
-          <span className="item-score">
-            {info.score < 1 ? `${(info.score * 100).toFixed(1)}%` : info.score}
-            {currentStat !== "foul_outs" &&" "}
-            {orderBy === "percentage" && "of "}
-            {currentStat == "foul_outs" ? 'x fouled out': currentStat}
-            {" "}
-            {orderBy === "total" && ""}
-            {orderBy === "average" && " per game"}
+    <Fade>
+      <div className="item-container">
+        <div className="headshot-container">
+          <span className="item-rank">
+            {info.tied === "false" ? info.rank : index + 1}
           </span>
+          <div className="item-jersey_position">
+            <span className="item-jersey">{info.player.jersey_number}</span>
+            <hr />
+            <span className="item-position">
+              {info.player.primary_position}
+            </span>
+          </div>
+          <img
+            className="headshot"
+            src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${pID}.png`}
+          />
+        </div>
+        <div className="item-info">
+          <div className="item-NameScore">
+            <span className="item-name">{info.player.full_name}</span>
+            <span className="item-score">
+              {info.score < 1
+                ? `${(info.score * 100).toFixed(1)}%`
+                : info.score}
+              {currentStat !== "foul_outs" && " "}
+              {orderBy === "percentage" && "of "}
+              {currentStat == "foul_outs" ? "x fouled out" : currentStat}{" "}
+              {orderBy === "total" && ""}
+              {orderBy === "average" && " per game"}
+            </span>
+          </div>
+        </div>
+        <div className="team-logo-container">
+          <img
+            className="team-logo"
+            src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
+          />
         </div>
       </div>
-      <div className="team-logo-container">
-
-        <img
-          className="team-logo"
-          src={`https://raw.githubusercontent.com/DMC09/League-Leaders/item_redesign/src/Team_logos/${teamlogoname}.png`}
-        />
-      </div>
-    </div>
-  </Fade>
+    </Fade>
   );
-}
+};
 
 export default Item;

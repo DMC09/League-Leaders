@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
 
-const ButtonContainer = () => {
+const StatFilter = () => {
   const mainStats = [
     "minutes",
     "points",
@@ -86,4 +86,4 @@ const ButtonContainer = () => {
   );
 };
 
-export default ButtonContainer;
+export default StatFilter;

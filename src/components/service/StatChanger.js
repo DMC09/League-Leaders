@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { CategoryContext } from "../../context/categoryContext";
 import Logo from "../../Logo.png";
-import ButtonContainer from "../container/ButtonContainer";
+import StatFilter from "./StatFilter";
 import Toggle from "react-toggle";
 import "../../react-switch.css";
 
@@ -140,7 +140,7 @@ const  StatChanger =()=> {
         </select>
 
         {currentStat !== null ? (
-          <ButtonContainer />
+          <StatFilter />
         ) : (
           <div className="button-container"></div>
         )}
